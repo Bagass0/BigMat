@@ -144,6 +144,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 	<script src="assets/js/main.js"></script>
 
 	<script>
+		// cette partie là pour le afficher le mot de passe
 		function affichageMDP() {
 			var x = document.getElementById("connect");
 			if (x.type === "password") {

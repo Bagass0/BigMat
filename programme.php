@@ -34,10 +34,11 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 <body class="bgPages">
 
 	<?php include 'header.php' ?>
-
-	<section id="two" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 5em; margin-bottom: -7em;">
-		<h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> Programme du <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "13 au 16 juin 2023" : "14 au 17 juin 2023"); ?> </h3>
+<!--
+	<section id="two" class="wrapper align-left" style="border-radius: 0px; padding-top: 5em; margin-top: 5em; margin-bottom: -7em;">
+		<h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "13 au 16 juin 2023" : "14 au 17 juin 2023"); ?> </h3>
 	</section>
+-->
 	
 	<section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 0 !important">
 
@@ -50,8 +51,9 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 					<div class="programmeBox">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 1&nbsp;</mark>: Mardi 13 Juin 2023</h3>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 1&nbsp;--></mark> Mercredi 21 Septembre 2022</h3>
 							<br>
+							<!--
 							<div class="horairesProgramme">
 								<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left; font-weight: 700;;">
 									12H00<br>
@@ -85,20 +87,27 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								Check-in à l’hôtel Cameron House et installation en chambre<br>
 								<br>
 								Dîner écossais dans une ambiance cosy au Club House<br>
-							</p>
+							</p>-->
+							<div class="programme">
+								- Déjeuner à l'hôtel <br>
+								- Conseil de surveilance<br>
+								- Le Dijeuner à l'hôtel<br>
+								- Nuit à l'hôtel Barriere Lille<br>
+							</div>
 						</div>
 
-						<img src="images/photo-1-programme.jpg" class="programmeImg">
+						<img src="images/Groupe 1 photo programme.png" class="programmeImg">
 
 					</div>
 
-					<div class="programmeBox">
+					<div class="programmeBox reverseFlex">
 
 						<img src="images/photo-2-programme.jpg" class="programmeImg imgDisplayNone1" style="border-radius: 0.7em 0 0 0.7em !important;">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 2&nbsp;</mark>: Mercredi 14 Juin 2023</h3>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 2&nbsp;--></mark> Jeudi 22 Septembre 2022</h3>
 							<br>
+							<!--
 							<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 								Matinée consacrée à la découverte du Loch Lomond en petits groupes<br>
 								<br>
@@ -110,18 +119,33 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								<br>
 								Dîner au restaurant avec vue panoramique sur Édimbourg<br>
 
-							</p>
+							</p>-->
+							<div class="programme" >
+								- Petit-déjeuner à l'hotel <br>
+								- Conseil de surveilance<br>
+								- La pause-café magic_quotes_runtime<br>
+								- Cocktail déjeunatoire<br>
+								- Réunion<br>
+								- La pause-café PM<br>
+								- Transfert aller/retour en bus pour la Soirée<br>
+								- Visite guidée du Louvre Lens<br>
+								- Diner et soirée au louvre Lens privatisé<br><br>
+
+								Nuit à l'hôtel Barrière Lile<br>
+
+							</div>
 						</div>
 
-						<img src="images/photo-2-programme.jpg" class="programmeImg imgDisplayNone2">
+						<img src="images/Groupe 2 photo programme.png" class="programmeImg imgDisplayNone2">
 
 					</div>
 
 					<div class="programmeBox">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 3&nbsp;</mark>: Jeudi 15 Juin 2023</h3>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 3&nbsp;--></mark> Vendredi 23 Septembre 2022</h3>
 							<br>
+							<!--
 							<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 								Matinée consacrée à la visite guidée du centre historique d’Édimbourg et à la rencontre avec les artisans locaux<br>
 								<br>
@@ -132,20 +156,33 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								Réunion de travail à l’hôtel pour les courtiers et visite du Château d’Édimbourg pour les accompagnants<br>
 								<br>
 								Soirée de Gala commune<br>
-							</p>
+							</p> -->
+							<div class="programme" >
+								- Petit-déjeuner à l'hôtel<br>
+								- Réunion<br>
+								- La pause-café matin<br>
+								- Déjeuner<br>
+								- La pause-café PM<br>
+								- Réunion<br>
+								- Visite guidée de Lile avec dégustation<br>
+								- Transfert alier / retour en bus pour la soirée<br>
+								- Dj<br><br>
+								Nuit à l'hôtel Barrière Lile<br>
+							</div>
 						</div>
 
-						<img src="images/photo-3-programme.jpg" class="programmeImg">
+						<img src="images/Groupe Photo Accueil.png" class="programmeImg">
 
 					</div>
 
-					<div class="programmeBox">
+					<div class="programmeBox  reverseFlex">
 
-						<img src="images/photo-4-programme.jpg" class="programmeImg imgDisplayNone1" style="border-radius: 0.7em 0 0 0.7em !important;">
+						
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 4&nbsp;</mark>: Vendredi 16 Juin 2023</h3>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 4&nbsp;--></mark> Samedi 24 Septembre 2022</h3>
 							<br>
+							<!--
 							<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 								Promenade vers Arthur’s Seat, le point de vue panoramique sur la ville d’Édimbourg<br>
 							</p>
@@ -179,10 +216,16 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 							<br>
 							<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 								Transfert retour en bus vers l’aéroport de Paris Roissy Charles de Gaulle pour ceux qui le souhaitent<br>
-							</p>
-						</div>
+							</p>-->
 
-						<img src="images/photo-4-programme.jpg" class="programmeImg imgDisplayNone2">
+							<div class="programme" >
+							- Petit-déjeuner à l'hôtel <br>
+							- Check out<br>
+						</div>
+						</div>
+						
+
+						<img src="images/AdobeStock_174715464.jpeg" class="programmeImg imgDisplayNone2">
 
 					</div>
 
@@ -191,8 +234,8 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 					<div class="programmeBox">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 1&nbsp;</mark>: Mercredi 14 Juin 2023</h3>
-							<br>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 1&nbsp;--></mark> Mercredi 21 Septembre 2022</h3>
+							<br> <!--
 							<div class="horairesProgramme">
 								<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left; font-weight: 700;;">
 									12H00<br>
@@ -226,20 +269,27 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								Check-in à l’hôtel Cameron House et installation en chambre<br>
 								<br>
 								Dîner écossais dans une ambiance cosy au Club House<br>
-							</p>
+							</p>-->
+							<div class="programme" >
+								- Déjeuner à l'hôtel <br>
+								- Conseil de surveilance<br>
+								- Le Dijeuner à l'hôtel<br>
+								- Nuit à l'hôtel Barriere Lille<br>
+							</div>
 						</div>
 
-						<img src="images/photo-1-programme.jpg" class="programmeImg">
+						<img src="images/Groupe 1 photo programme.png" class="programmeImg">
 
 					</div>
 
-					<div class="programmeBox">
+					<div class="programmeBox reverseFlex">
 
 						<img src="images/photo-2-programme.jpg" class="programmeImg imgDisplayNone1" style="border-radius: 0.7em 0 0 0.7em !important;">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 2&nbsp;</mark>: Jeudi 15 Juin 2023</h3>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 2&nbsp;--></mark>Jeudi 22 Septembre 2022</h3>
 							<br>
+							<!--
 							<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 								Matinée consacrée à la découverte du Loch Lomond en petits groupes ou golf pour ceux qui le souhaitent<br>
 								<br>
@@ -250,18 +300,33 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								Réunion de travail à l’hôtel pour les courtiers et visite du Château d’Édimbourg pour les accompagnants<br>
 								<br>
 								Soirée de Gala commune<br>
-							</p>
+							</p>-->
+							<div class="programme" >
+								- Petit-déjeuner à l'hotel <br>
+								- Conseil de surveilance<br>
+								- La pause-café magic_quotes_runtime<br>
+								- Cocktail déjeunatoire<br>
+								- Réunion<br>
+								- La pause-café PM<br>
+								- Transfert aller/retour en bus pour la Soirée<br>
+								- Visite guidée du Louvre Lens<br>
+								- Diner et soirée au louvre Lens privatisé<br><br>
+
+								Nuit à l'hôtel Barrière Lile<br>
+
+							</div>
 						</div>
 
-						<img src="images/photo-2-programme.jpg" class="programmeImg imgDisplayNone2">
+						<img src="images/Groupe 2 photo programme.png" class="programmeImg imgDisplayNone2">
 
 					</div>
 
 					<div class="programmeBox">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 3&nbsp;</mark>: Vendredi 16 Juin 2023</h3>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 3&nbsp;--></mark>Vendredi 23 Septembre 2022</h3>
 							<br>
+							<!--
 							<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 								Promenade vers Arthur’s Seat, le point de vue panoramique sur la ville d’Édimbourg<br>
 								<br>
@@ -272,20 +337,21 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								Après-midi consacrée à la visite guidée du centre historique d’Édimbourg et à la rencontre avec les artisans locaux<br>
 								<br>
 								Dîner au restaurant avec vue panoramique sur Édimbourg<br>
-							</p>
+							</p>-->
+
 						</div>
 
-						<img src="images/photo-3-programme.jpg" class="programmeImg">
+						<img src="images/Groupe Photo Accueil.png" class="programmeImg">
 
 					</div>
 
-					<div class="programmeBox">
+					<div class="programmeBox  reverseFlex">
 
 						<img src="images/photo-4-programme.jpg" class="programmeImg imgDisplayNone1" style="border-radius: 0.7em 0 0 0.7em !important;">
 
 						<div class="displayPicto programmeText">
-							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;">&nbsp;JOUR 4&nbsp;</mark>: Samedi 17 Juin 2023</h3>
-							<br>
+							<h3 class="programmeTitre displayPicto"><mark style="background-color: #FFD400;"><!--&nbsp;JOUR 4&nbsp;--></mark> Samedi 24 Septembre 2022</h3>
+							<br> <!--
 							<div class="horairesProgramme">
 								<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left; font-weight: 700;;">
 									10H30<br>
@@ -315,10 +381,14 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 								<p class="sizeProgrammeP" style="margin: 0 1em 0 1em; text-align: left;">
 									Arrivée à l’aéroport de <b class="sourceSansPro">PARIS ROISSY CDG</b><br>
 								</p>
-							</div>
+							</div>-->
+							<div class="programme" >
+							- Petit-déjeuner à l'hôtel <br>
+							- Check out<br>
+						</div>
 						</div>
 
-						<img src="images/photo-4-programme.jpg" class="programmeImg imgDisplayNone2">
+						<img src="images/AdobeStock_174715464.jpeg" class="programmeImg imgDisplayNone2">
 
 					</div>
 
