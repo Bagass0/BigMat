@@ -104,26 +104,36 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 
 <body class="bgLogin">
 
-	<section id="banner" style="background-image: url('images/bg_black.jpg'); height:100%;">
-		<div id="page_connect" class="boxLogin">
-			<!-- <p style="background-color: #FFD400; color: #000; width: fit-content; margin-left: auto; margin-right: auto; padding: 0 0.5em 0 0.5em; font-weight: 700;">
-				Voyage courtage national
-			</p> -->
-			<div id="connexion">
-				<form action="login.php" method="post" id="connect_form">
-					<input type="text" name="email" id="email" value="" placeholder="Email" class="12u$" style="margin-bottom:20px; color:#1e2336;">
-					<input type="password" name="connect" id="connect" value="" placeholder="Mot de passe" class="12u$" style="margin-bottom:20px; color:#1e2336;">
-					<div class="12u$">
-						<input type="checkbox" class="checkbox" id="checkbox" style="margin-bottom:20px; color:#1e2336;">
-						<label for="checkbox" class="checkbox" onclick="affichageMDP()">Afficher le mot de passe</label>
-					</div>
-					<input type="submit" value="Connexion" class="special" style="background: linear-gradient(to right, #FFD400, #FFD400); color: #000; font-weight: 700;" name="connexion">
-				</form>
+	<section id="banner" style="background-image: url('images/img.jpg'); height:100%;">
+	<div><img src="images/logo.png" style="height:60px; width:15%;"></div>
+	<div id="background-color" style="background: rgba(0, 0, 0, 0.3); width: 100%; height: 50%; display: flex; justify-content: center; align-items: center;">
+			<div id="page_connect" class="page_connect">
+				<!-- <p style="background-color: #FFD400; color: #000; width: fit-content; margin-left: auto; margin-right: auto; padding: 0 0.5em 0 0.5em; font-weight: 700;">
+					Voyage courtage national
+				</p> -->
+				<div id="connexion">
+					<form action="login.php" method="post" id="connect_form">
+						<div class="input-container">
+							<span class="icon"><img src="images/email.jpg" style="  width: 20px; height: 20px;" ></span>
+							<input type="text" name="email" id="email" value="" placeholder="Email" class="12u$" style="margin-bottom:20px; color:#1e2336;">
+						</div>
+						<div class="input-container">
+							<span class="icon"><img src="images/mdp.jpg"style=" width: 20px; height: 20px;"  ></span>
+							<input type="password" name="connect" id="connect" value="" placeholder="Mot de passe" class="12u$" style="margin-bottom:20px; color:#1e2336;">
+						</div>
+						<!--
+						<div class="12u$">
+							<input type="checkbox" class="checkbox" id="checkbox" style="margin-bottom:20px; color:#1e2336;">
+							<label for="checkbox" class="checkbox" onclick="affichageMDP()">Afficher le mot de passe</label>
+						</div>-->
+						<input type="submit" value="Connexion" class="special" style="background: linear-gradient(to right, #F97613,#F97613); color: #ffffff; font-weight: 700;" name="connexion">
+					</form>
+				</div>
+				<p><a href="forget.php" style="color: #ffffff; font-family:system-ui; font-weight:bold;">Mot de passe oublié ?</a></p>
+				<?php if ($error != "") {
+					echo "<p style='background:#ff0000; color:#000;'>" . $error . "</p>";
+				} ?>
 			</div>
-			<p><a href="forget.php" style="color: #000;">Mot de passe oublié ?</a></p>
-			<?php if ($error != "") {
-				echo "<p style='background:#ff0000; color:#000;'>" . $error . "</p>";
-			} ?>
 		</div>
 	</section>
 
