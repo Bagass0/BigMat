@@ -3289,16 +3289,61 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 		border-radius: 8px;
 }
 
-.input-container {
-    position: relative;
-    margin-bottom: 15px;
+
+
+/* tout cette partie là pour les icons de mail et mot de passe (ligne 3294 à 3347*/
+/* Style pour l'icône */
+.icon {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    background-color: rgb(248, 247, 247); 
+    border: 0px solid rgb(245, 245, 245); 
+    border-radius: 5px; 
+    width: 15px; 
+    height: 15px; 
+	position: absolute;
+    top: 36%;
+    left: 55px; 
+    transform: translateY(-50%);
+    z-index: 1; /* Pour empêcher l'icône d'être masquée par le champ de saisie */
+}
+.icon-envelope {
+    display: flex;
+    align-items: center;
+	background-color: rgb(9, 9, 9); 
+    border: 0px solid rgb(8, 7, 7); 
+    padding: 3px; 
+    background-color: transparent; 
+    border: 0; 
+    width: 5px; 
+    height: 5px; 
+    position: absolute;
+    top: 10%;
+    left: 55px; 
+    transform: translateY(-50%);
+    z-index: 1; /* Pour empêcher l'icône d'être masquée par le champ de saisie */
 }
 
-.icon {
-    position: absolute;
-    top: 55%;
-    left: -1px;
-    transform: translateY(-50%);
+/* Style pour l'icône FontAwesome */
+.icon i {
+    font-size: 10px; /* Taille de la police de l'icône (ajustez cette valeur) */
+    color: rgb(10, 10, 10); /* Couleur de l'icône */
+    margin-right: 1px; /* Marge à droite de l'icône */
+}
+
+
+/* Style pour l'icône FontAwesome */
+.icon-envelope i {
+    font-size: 10px; /* Taille de la police de l'icône (ajustez cette valeur) */
+    color:  rgb(10, 10, 10);/* Couleur de l'icône (ajustez cette valeur) */
+    margin-right: 1px; /* Marge à droite de l'icône */
+}
+
+/* Style pour le champ de saisie */
+.input-container input[type="text"],
+.input-container input[type="password"] {
+    padding-left: 30px; /* Ajustez la marge à gauche du texte pour laisser de l'espace à l'icône */
 }
 
 
