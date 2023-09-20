@@ -96,6 +96,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main-login.css" />
 	<link rel="icon" href="images/favicon.ico" type="image/png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -114,11 +115,11 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 				<div id="connexion">
 					<form action="login.php" method="post" id="connect_form">
 						<div class="input-container">
-							<span class="icon"><img src="images/email.jpg" style="  width: 20px; height: 20px;" ></span>
+							<span class="icon-envelope"><i class="fa-solid fa-envelope"></i></span>
 							<input type="text" name="email" id="email" value="" placeholder="Email" class="12u$" style="margin-bottom:20px; color:#1e2336;">
 						</div>
 						<div class="input-container">
-							<span class="icon"><img src="images/mdp.jpg"style=" width: 20px; height: 20px;"  ></span>
+							<span class="icon"><i class="fa-solid fa-lock" ></i></span>
 							<input type="password" name="connect" id="connect" value="" placeholder="Mot de passe" class="12u$" style="margin-bottom:20px; color:#1e2336;">
 						</div>
 						<!--
