@@ -87,18 +87,20 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
 
     <div id="Container_accueil">
         <div id="Container_gauche">
-            <h1>Molorumenist delit maio<br>omnia id moluptione</h1>
-            <p>utatqui volupit,Molorumenist delit maio<br>
-            omnia id moluptione pediam alit eturias<br>
-            itatur? GIa sinvenm landita estiusam dipsand<br>
-            andipsam delescit, atem hic temolore<br>
-            quiduciae lique pel il mi, sita quam nem quia<br>
-            nullit omnis ea pe doluptas sinitio riberro<br>
-            volecum fugitiant.<br>
-            Es pedignatur, undae volorit aspit, nonseditas<br>
-            doluptae vel moluptam nullestint officia<br>
-            doluptaquas nest, venderepturi id quia<br>
-            voluptatia voleserum cusdaernati ra dolum</p>
+            <div id="block1">
+                <h1>Molorumenist delit maio<br>omnia id moluptione</h1>
+                <p>utatqui volupit,Molorumenist delit maio<br>
+                omnia id moluptione pediam alit eturias<br>
+                itatur? GIa sinvenm landita estiusam dipsand<br>
+                andipsam delescit, atem hic temolore<br>
+                quiduciae lique pel il mi, sita quam nem quia<br>
+                nullit omnis ea pe doluptas sinitio riberro<br>
+                volecum fugitiant.<br>
+                Es pedignatur, undae volorit aspit, nonseditas<br>
+                doluptae vel moluptam nullestint officia<br>
+                doluptaquas nest, venderepturi id quia<br>
+                voluptatia voleserum cusdaernati ra dolum</p>
+            </div>    
             <button>Inscription</button>
         </div>
         

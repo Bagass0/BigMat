@@ -3150,7 +3150,11 @@ button:disabled,
 
 body{
 	background-image: url(../../images/img.jpg);
+	background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
 	margin: 0;
+	padding: 0;
 	font-family: Arial, sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -3175,8 +3179,10 @@ body{
 
 #Container_gauche{
 	align-items: center;
-	max-width: 600px;
-	min-width: 400px;
+	max-width: 60%;
+	min-width: 40%;
+	display: flex;
+	flex-direction: column;
 }
 
 #Container_gauche button{
@@ -3185,12 +3191,12 @@ body{
 	border-radius: 5px;
 	text-align: center;
 	font-size: 12px;
-	margin-left: 25%;
 }
 
 #Container_gauche h1{
 	font-weight: bold;
 	word-spacing: 3px;
+	flex: left;
 }
 
 #Container_gauche p{
@@ -3198,9 +3204,14 @@ body{
 	word-spacing: normal;
 }
 
+#Container_droit{
+	display: flex;
+
+}
+
 #Container_droit img{
-	height: 55vh;
-	width: 70vh;
+	height: 500px;
+	width: 100%;
 }
 
 #welcome.onlymobile {
@@ -3262,7 +3273,6 @@ body{
 
 }
 
-#navPanel .close:hover {}
 
 /* Banner */
 
@@ -3495,6 +3505,11 @@ body{
 .Footer1 span a{
 	text-decoration: none;
 	color: #000;
+}
+
+#block1{
+	display: flex;
+	flex-direction: column;
 }
 
 @media screen and (max-width: 736px) {
