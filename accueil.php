@@ -83,8 +83,30 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
 </head>
 
 <body>
-
     <?php include 'header.php' ?>
+
+    <div id="Container_accueil">
+        <div id="Container_gauche">
+            <h1>Molorumenist delit maio<br>omnia id moluptione</h1>
+            <p>utatqui volupit,Molorumenist delit maio<br>
+            omnia id moluptione pediam alit eturias<br>
+            itatur? GIa sinvenm landita estiusam dipsand<br>
+            andipsam delescit, atem hic temolore<br>
+            quiduciae lique pel il mi, sita quam nem quia<br>
+            nullit omnis ea pe doluptas sinitio riberro<br>
+            volecum fugitiant.<br>
+            Es pedignatur, undae volorit aspit, nonseditas<br>
+            doluptae vel moluptam nullestint officia<br>
+            doluptaquas nest, venderepturi id quia<br>
+            voluptatia voleserum cusdaernati ra dolum</p>
+            <button>Inscription</button>
+        </div>
+        
+        <div id="Container_droit">
+            <img src="images/img_accueil.png">
+        </div>
+
+    </div>    
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -112,9 +134,7 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
         });
     </script>
 
-    <footer>
-        <?php include 'footer.php' ?> 
-    </footer>    
+    <?php include 'footer.php' ?>    
 </body>
 
 </html>

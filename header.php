@@ -2,7 +2,6 @@
 require_once './connect_societe.php';
 ?>
 
-<div class="Conteneur55">
 	<header id="header">
 		<div id="nav1" style="box-shadow: 0 0.5em 0.7em -0.5em rgba(0, 0, 0, 0.1);" class="bgColorHeader">
 			<a href="index.php" class="logo" style="width: auto;"></a>
@@ -17,5 +16,3 @@ require_once './connect_societe.php';
 			</nav>
 		</div>
 	</header>
-
-</div>	
