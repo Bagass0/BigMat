@@ -4493,12 +4493,26 @@ select[readonly] {
 
 }
 
+
+/*cette partie pour mettre deux images en background (ligne 4494 - 4512)*/
 .bgPages {
 	background-color: #FFF;
 	background-image: url('../../images/background-login.png');
 	height: 100%;
 	background-position: center bottom;
 	background-repeat: no-repeat;
+}
+.bgPages::after {
+    content: "";
+    background-image:  url('../../images/img.jpg'); /* Dégradé de fond transparent à moitié et image de fond */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: -1; /* Placer l'élément en dessous de .bgPages */
 }
 
 .bgAccueil {
@@ -4620,9 +4634,12 @@ b {
 .programmeBox {
 	display: flex;
 	border-radius: 1em;
-	border: solid 5px #000;
 	width: 100%;
 	margin-bottom: 3em;
+}
+
+.programme{
+	font-weight: 100;
 }
 
 .programmeText {
@@ -4639,12 +4656,17 @@ b {
 }
 
 .imgDisplayNone1 {
-	display: block;
+	display: none;
 }
 
 .imgDisplayNone2 {
-	display: none;
+	display: block;
 }
+
+.reverseFlex {
+    flex-direction: row-reverse;
+}
+
 
 .horairesProgramme {
 	display: flex;
