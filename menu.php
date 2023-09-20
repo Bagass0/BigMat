@@ -15,7 +15,7 @@
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class="headerP">Actualités</p></a>';
+        echo '"><p class="headerP">Programme</p></a>';
     } ?>
     <?php $class = ($fichierPHP == "programme.php" ? 'menuHeaderU' : 'menuHeader');
     if ($dataGeneral['OPT_PROGRAMME'] == 1) {
@@ -23,7 +23,7 @@
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class="headerP">Programme</p></a>';
+        echo '"><p class="headerP">Documents</p></a>';
     } ?>
     <?php $class = ($fichierPHP == "information.php" ? 'menuHeaderU' : 'menuHeader');
     if ($dataGeneral['OPT_INFOSPRATIQUES'] == 1) {
@@ -31,7 +31,7 @@
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class="headerP">Informations<br>pratiques</p></a>';
+        echo '"><p class="headerP">Galerie</p></a>';
     } ?>
     <?php $class = ($fichierPHP == "mesures.php" ? 'menuHeaderU' : 'menuHeader');
     if ($dataGeneral['OPT_HEBERGEMENT'] == 1) {
@@ -47,7 +47,7 @@
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class="headerP">Bonnes<br>adresses</p></a>';
+        echo '"><p class="headerP">Plan d\'accés</p></a>';
     } ?>
     <?php $class = ($fichierPHP == "contactez-nous.php" ? 'menuHeaderU' : 'menuHeader');
     if ($dataGeneral['OPT_CONTACT'] == 1) {

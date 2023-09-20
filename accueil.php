@@ -86,58 +86,6 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
 
     <?php include 'header.php' ?>
 
-    <section id="one" class="wrapper align-left bgAccueil" style="padding-top: 5em; margin: -0.6em 0 0 0 !important; max-width: 100%">
-
-        <div class="inner marginAcceuil" style="width: 30em; margin: 0 12em 0 12em;">
-
-            <div>
-                <div style="display: block" style="margin: 1em">
-                    <div style="display: flex; margin-bottom: 1em;">
-                        <img src="images/imgEdito.png" style="margin-right: 3em; width: 9em; height: 7.7em;" class="">
-                        <h3 style="font-size: 32px; font-weight: 700; text-align: left; align-self: flex-end;">Édito</h3>
-                    </div>
-                    <p class="sourceSansPro">
-                        Cher Partenaire,<br>
-                        <br>
-                        Grâce à votre travail et votre fidélité, vous faites partie des lauréats de notre séminaire national.<br>
-                        Bravo pour cette belle performance et recevez nos félicitations et nos sincères remerciements pour votre confiance.<br>
-                        L’équipe d’Abeille&nbsp;Assurances sera mobilisée pour vous faire vivre la véritable Écosse à travers des moments d’échanges professionnels enrichissants et de rencontres qui rendront votre séjour convivial et chaleureux.<br>
-                        Je suis très heureux de pouvoir vous retrouver ou vous rencontrer pour partager les valeurs et l’histoire riche de l’Écosse.<br>
-                        <br>
-                        Bien cordialement.<br>
-                        <br>
-                        Renaud Célié<br>
-                        Directeur Général Délégué<br>
-                        Développement, Service aux clients, Transformation Digitale & IT<br>
-                        <br>
-                        <br>
-                        <b>Nous vous remercions de valider votre participation et de télécharger tous les documents demandés avant le 15/05/23</b>
-                    </p>
-                    <br>
-                    <p style="text-align:center;">
-                        <button class="buttonAccueil" onclick="location.href='profil.php';">Inscription</button>
-                    </p><br>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ten" class="wrapper align-center bloclock" style="max-width: 100%; border-top: solid;">
-
-        <div class="inner">
-
-            <div class="clock"></div>
-
-            <h1 class="clockTitre">
-                Avant la clôture des inscriptions
-            </h1>
-
-        </div>
-
-    </section>
-
-    <?php include 'footer.php'; ?>
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
@@ -164,6 +112,9 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
         });
     </script>
 
+    <footer>
+        <?php include 'footer.php' ?> 
+    </footer>    
 </body>
 
 </html>
