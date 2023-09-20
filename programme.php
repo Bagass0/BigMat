@@ -96,7 +96,7 @@ if ($dataGeneral["OPT_PROGRAMME"] != 1) {
 							</div>
 						</div>
 
-						<img src="images/Groupe 1 photo programme.png" class="programmeImg">
+						<img src="images/Groupe 1 photo programme.png"  class="programmeImg">
 
 					</div>
 
