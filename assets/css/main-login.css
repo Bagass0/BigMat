@@ -2555,7 +2555,7 @@
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: transparent;
 		color: #FFF;
-		border-radius: 30px;
+		border-radius: 6px;
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
@@ -3229,6 +3229,7 @@ footer {
 		right:50%;
 		margin-right:-300px;
 		margin-top:-270px;	
+		
 	}
 	
 	#page_connect1 {
@@ -3241,6 +3242,16 @@ footer {
 		margin-top:-275px;	
 	}
 
+}
+
+.page1{
+	width:600px;
+	position:absolute;
+	top:50%;
+	right:50%;
+	margin-right:-300px;
+	margin-top:-270px;	
+	
 }
 
 @media screen and (max-width: 899px) {
@@ -3275,7 +3286,21 @@ width: 125px !important;
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select, textarea{
 	background: #fff !important;
         border:solid 1px #ccc !important;
+		border-radius: 8px;
 }
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.icon {
+    position: absolute;
+    top: 55%;
+    left: -1px;
+    transform: translateY(-50%);
+}
+
 
 #logo_home{width:275px !important;}
 
@@ -3293,8 +3318,8 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 }
 
 .bgLogin {
-	background-image: url('../../images/logo-login.jpg'), url('../../images/background-login.png');
-	height:55em;
+	background-image: url('../../images/logo.png'), url('../../images/AdobeStock_4287791.jpg');
+	height:70em; /* c'est pour la photos de backgrouns */ 
 	background-position: 97% 5%, 1em -7em;
 	background-repeat: no-repeat, no-repeat;
 	background-size: 20em ,auto;
