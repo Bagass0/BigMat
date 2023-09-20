@@ -113,21 +113,6 @@ section {
 	display: block;
 }
 
-body::before {
-	content: "";
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
-  }
-
-body{
-	background-image: url('../../images/img.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment:fixed;
-}
-
 ol,
 ul {
 	list-style: none;
@@ -149,10 +134,6 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-body {
-	-webkit-text-size-adjust: none;
 }
 
 #one {
@@ -1772,9 +1753,6 @@ body {
 	width: device-width;
 }
 
-body {
-	-ms-overflow-style: scrollbar;
-}
 
 @media screen and (max-width: 480px) {
 
@@ -1812,9 +1790,6 @@ textarea {
 	background-color: #FFF;
 }
 
-body {
-	font-size: 14pt;
-}
 
 input,
 select,
@@ -2004,7 +1979,13 @@ hr.major {
 	max-width: 90%;
 	margin: 0 auto;
 	margin-top: -1em;
+	background-color: rgba(0, 0, 0, 0,3);
 
+}
+
+.inner2{
+	background-color: #FFF;
+	padding-top: 10px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -2944,33 +2925,15 @@ button:disabled,
 
 /* Header */
 
-.subpage {
-	padding-top: 44px;
-}
-
-.subpage #header {
-	background: rgba(77, 159, 144, 1);
-	top: 0;
-	height: 44px;
-	line-height: 44px;
-	position: fixed;
-}
-
 #header {
-	color: #000;
+	color: #0000002e;
 	cursor: default;
 	left: 0;
 	line-height: 70px;
 	height: 82px;
-	position: absolute;
 	text-align: center;
 	background-color: #ffffff;
 	height: fit-content;
-	 position: fixed;
-
-	/*background: #FFD400 ;
-        background-image: linear-gradient(to right, #2d85cc, #A4D5FA);*/
-
 	width: 100%;
 	z-index: 10001;
 	top: 0px;
@@ -3035,12 +2998,12 @@ button:disabled,
 	color: inherit;
 	text-decoration: none;
 	font-size: 0.8em;
-	font-weight: 500;
+	font-weight: 200;
 	font-size: 14px;
-	border-right: solid;
 	align-items: center;
 	justify-content: center;
 	font-weight: 700;
+	color: #fff;
 }
 
 .headerP {
@@ -3055,10 +3018,6 @@ button:disabled,
 	z-index: 15;
 	margin: 0;
 	font-weight: 700;
-}
-
-#header #nav a:hover {
-	color: rgb(45, 45, 45);
 }
 
 #header a:last-child {
@@ -3187,6 +3146,61 @@ button:disabled,
 
 #header #deconnexion {
 	font-size: 0.8em;
+}
+
+body{
+	background-image: url(../../images/img.jpg);
+	margin: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;	
+}
+
+#Container_accueil{
+	background-color: #FFF;
+	border-radius: 10px;
+	max-width: 65%;
+	min-width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	flex-grow: 1;
+}
+
+#Container_gauche{
+	align-items: center;
+	max-width: 600px;
+	min-width: 400px;
+}
+
+#Container_gauche button{
+	background-color: rgb(251, 118, 17);
+	color: #FFF;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 12px;
+	margin-left: 25%;
+}
+
+#Container_gauche h1{
+	font-weight: bold;
+	word-spacing: 3px;
+}
+
+#Container_gauche p{
+	font-family: Arial;
+	word-spacing: normal;
+}
+
+#Container_droit img{
+	height: 55vh;
+	width: 70vh;
 }
 
 #welcome.onlymobile {
@@ -3467,45 +3481,20 @@ button:disabled,
 	opacity: 0;
 }
 
+
+
 /* Footer */
 
-#footer {
-	padding: 1em 0;
-	color: #fff;
+.Footer1{
+	background-color: #FFF;
+	width: 100%;
+	padding-top: 10px;
 	text-align: center;
-	background: #FFF0;
-	font-weight: 500;
 }
 
-#footer h3 {
-	color: #000000;
-	margin-bottom: 2em !important;
-}
-
-#footer label {
-	text-align: left;
-	color: #000000;
-}
-
-#footer .copyright {
-	color: #000;
-	font-size: 1em;
-	margin: 0 0 0 0;
-	padding: 0;
-	font-size: 12pt !important
-}
-
-#footer .copyright a {
-	color: #000;
+.Footer1 span a{
 	text-decoration: none;
-}
-
-@media screen and (max-width: 980px) {
-
-	#footer {
-		padding: 4em 0;
-	}
-
+	color: #000;
 }
 
 @media screen and (max-width: 736px) {
@@ -3945,7 +3934,6 @@ h3 {
 
 	#copyright {
 		width: 100%;
-		margin: 10px 0;
 		float: left;
 	}
 }
@@ -3953,6 +3941,11 @@ h3 {
 footer {
 	position: relative;
 	margin: 0px auto 0px auto;
+}
+
+.copyright{
+	text-align: center;
+	width: 100%;
 }
 
 
@@ -3982,10 +3975,6 @@ footer {
 		padding: 0 10px;
 	}
 
-	#copyright {
-		height: 100px;
-		line-height: 100px;
-	}
 }
 
 
@@ -4239,7 +4228,7 @@ tfoot span {
 
 .menuHeader {
 	display: flex;
-	flex-direction: column;
+	flex-direction: columnf;
 	text-decoration: none;
 	transition: color 0.1s, background-color 0.1s;
 }
@@ -4533,13 +4522,6 @@ b {
 		background-color: #00000064;
 	}
 
-}
-
-@media screen and (min-width: 981px) {
-	:root {
-		--header-color: #FFD400;
-		--header-color2: #e7c000;
-	}
 }
 
 
