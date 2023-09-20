@@ -9,17 +9,19 @@
         }
         echo '"><p class="headerP">Accueil</p></a>';
     } ?>
-    <?php $class = ($fichierPHP == "actualites.php" ? 'menuHeaderU' : 'menuHeader');
-    if ($dataGeneral['OPT_ACTUALITES'] == 1) {
-        echo '<a class="' . $class . '" href="actualites.php';
+
+<?php $class = ($fichierPHP == "programme.php" ? 'menuHeaderU' : 'menuHeader');
+    if ($dataGeneral['OPT_PROGRAMME'] == 1) {
+        echo '<a class="' . $class . '" href="programme.php';
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
         echo '"><p class="headerP">Programme</p></a>';
     } ?>
-    <?php $class = ($fichierPHP == "programme.php" ? 'menuHeaderU' : 'menuHeader');
-    if ($dataGeneral['OPT_PROGRAMME'] == 1) {
-        echo '<a class="' . $class . '" href="programme.php';
+
+    <?php $class = ($fichierPHP == "actualites.php" ? 'menuHeaderU' : 'menuHeader');
+    if ($dataGeneral['OPT_ACTUALITES'] == 1) {
+        echo '<a class="' . $class . '" href="actualites.php';
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
