@@ -38,9 +38,9 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 		<h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> Informations Pratiques </h3>
 	</section> -->
 
-	<section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 0 !important">
+	<section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 2em; margin-top: 0 !important">
 		<div class="container-galerie">
-			<div><h1>Galerie</h1></div>
+			<h1>Galerie</h1>
 			<div class="gallery1">
 				<div class="gallery-item1">
 					<img src="images/AdobeStock_114264196.jpeg" alt="Image 1">
