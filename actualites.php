@@ -52,7 +52,7 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
 <html>
 
 <head>
-    <title>Documents - <?php echo $dataGeneral['NOM']; ?></title>
+    <title>Galerie - <?php echo $dataGeneral['NOM']; ?></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -83,7 +83,7 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
     </style>
 </head>
 
-<body class="body_accueil">
+<body class="body_flex">
     <?php include 'header.php' ?>
 
     <div id="Container_docs">

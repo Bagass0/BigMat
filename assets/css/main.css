@@ -2559,12 +2559,13 @@ ul.actions {
 	cursor: default;
 	list-style: none;
 	padding-left: 0;
+	margin: 0 auto 0 auto;
 }
 
 ul.actions li {
 	display: inline-block;
 	padding: 0 1em 0 0;
-	vertical-align: middle;
+	text-align: center;
 }
 
 ul.actions li:last-child {
@@ -3151,7 +3152,7 @@ body{
 	padding: 0;
 }
 
-.body_accueil{
+.body_flex{
 	background-color: rgba(0, 0, 0, 0.6);
 	background-image: url(../../images/img.jpg);
 	background-size: cover;
@@ -3264,6 +3265,40 @@ body{
 #DOC_2{
 	border-bottom: solid grey 1px;
 	padding: 20px;
+}
+
+#Form_contact{
+	background-color: #FFF;
+	border-radius: 10px;
+	width: 80%;
+	margin: 0 auto 0 auto;
+	padding: 0 50px 30px 50px;
+	margin-top: 5%;
+}
+
+#Form_contact h1{
+	padding: 50px 0 50px 0;
+	text-align: center;
+	font-size: 30px;
+	color: grey;
+	font-weight: 500;
+}
+
+#ContainerSubmit{
+	display: flex;
+	justify-content: center;
+}
+
+#ContainerSubmit input{
+	background-color: orangered;
+	color: white;
+	border-radius: 3px;
+	font-size: 13px;
+	margin: 3% 0 2% 0;
+}
+
+#Page_contact{
+	flex: 1;
 }
 
 #welcome.onlymobile {

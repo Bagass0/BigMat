@@ -82,7 +82,7 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
     </style>
 </head>
 
-<body class="body_accueil">
+<body class="body_flex">
     <?php include 'header.php' ?>
 
     <div id="Container_accueil">
