@@ -22,6 +22,7 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/flipclock.css">
+	<link rel="stylesheet" href="assets/css/gallery1.css">
 	<link rel="icon" href="images/favicon.ico" type="image/png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -32,13 +33,58 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 <body class="bgPages">
 
 	<?php include 'header.php' ?>
-
+<!--
 	<section id="two" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 5em; margin-bottom: -7em;">
 		<h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> Informations Pratiques </h3>
-	</section>
+	</section> -->
 
 	<section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 0 !important">
-
+		<div class="container-galerie">
+			<div><h1>Galerie</h1></div>
+			<div class="gallery1">
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_114264196.jpeg" alt="Image 1">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_174715464.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_182533495.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_321492549.jpeg" alt="Image 2">
+				</div>
+			</div>
+			<div class="gallery1">
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_404555511.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_4287791.jpg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_45903314.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_488373627.jpeg" alt="Image 2">
+				</div>
+			</div>
+			<div class="gallery1">
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_56136013.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_7624965.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_95087697.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item1">
+					<img src="images/AdobeStock_7624965.jpeg" alt="Image 2">
+				</div>
+			</div>
+		</div>
+	<!--
 		<div class="inner" style="max-width: 90%;">
 
 			<div style="display: block">
@@ -55,7 +101,7 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 						<p class="sourceSansPro" style="margin: 0 1em 0 1em; text-align: left;">
 							<u>Conditions dʼentrée sur le territoire Écossais :</u><br>
 							<br>
-							Pour se rendre en Écosse, les ressortissants de l’Union Européenne doivent être en possession d’un <b class="sourceSansPro">passeport en cours de validité</b>, valable au moins <b class="sourceSansPro">jusquʼau <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "17" : "18"); ?> juin 2023</b>.<br>
+							Pour se rendre en Écosse, les ressortissants de l’Union Européenne doivent être en possession d’un <b class="sourceSansPro">passeport en cours de validité</b>, valable au moins <b class="sourceSansPro">jusquʼau <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "17" : "18"); ?> juin 2023</b>.<br>
 							<br>
 							<br>
 							<u>Formalités sanitaires :</u><br>
@@ -111,10 +157,10 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 						</div>
 
 						<p class="sourceSansPro" style="margin: 0 1em 0 1em; text-align: left;">
-							• Aller - <b class="sourceSansPro" style="background-color: #FFD400;"> <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "Mardi 13 juin 2023" : "Mercredi 14 juin 2023"); ?> </b><br>
+							• Aller - <b class="sourceSansPro" style="background-color: #FFD400;"> <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "Mardi 13 juin 2023" : "Mercredi 14 juin 2023"); ?> </b><br>
 							PARIS ROISSY CDG / GLASGOW – 14H00 / 14H50* - EasyJet 3126<br>
-							• Retour - <b class="sourceSansPro" style="background-color: #FFD400;"> <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "Vendredi 16 juin 2023" : "Samedi 17 juin 2023"); ?> </b><br>
-							EDIMBOURG / <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "PARIS ORLY - 14H25 / 17H25*  - Transavia 7925" : "PARIS ROISSY CDG - 13H00 / 15H55*  - EasyJet 3241"); ?><br>
+							• Retour - <b class="sourceSansPro" style="background-color: #FFD400;"> <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "Vendredi 16 juin 2023" : "Samedi 17 juin 2023"); ?> </b><br>
+							EDIMBOURG / <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "PARIS ORLY - 14H25 / 17H25*  - Transavia 7925" : "PARIS ROISSY CDG - 13H00 / 15H55*  - EasyJet 3241"); ?><br>
 							*Horaires à ce jour, sous réserve de modification par la compagnie aérienne<br>
 							<br>
 							- 1 petit bagage à main par personne, qui doit pouvoir être rangé sous le siège devant vous. Max 45 x 36 x 20 cm (poignées et roues comprises)<br>
@@ -267,12 +313,12 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 
 						<p class="sourceSansPro" style="margin: 0 1em 0 1em; text-align: left;">
 							<b class="sourceSansPro" style="font-weight: 600;">HÔTEL CAMERON HOUSE 5* - GLASGOW</b><br>
-							Du <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "13 au 14" : "14 au 15"); ?> juin – 1 nuit<br>
+							Du <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "13 au 14" : "14 au 15"); ?> juin – 1 nuit<br>
 							Loch Lomond, Alexandria G83 8QZ<br>
 							Tél : +44 138 931 2210<br>
 							<br>
 							<b class="sourceSansPro" style="font-weight: 600;">HÔTEL RADISSON BLU 4* - EDIMBOURG</b><br>
-							Du <?php echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "14 au 16" : "15 au 17"); ?> juin – 2 nuits<br>
+							Du <?php //echo $infoGroupe = ($data['GROUPE_VOYAGE'] == 1 ? "14 au 16" : "15 au 17"); ?> juin – 2 nuits<br>
 							The Royal Mile, 80 High St, Edinburgh EH1 1TH<br>
 							Tél : +44 131 557 9797<br>
 						</p>
@@ -283,7 +329,7 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 
 			</div>
 
-		</div>
+		</div>-->
 	</section>
 
 	<?php include 'footer.php'; ?>
