@@ -3178,7 +3178,7 @@ body{
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-	flex-grow: 1;
+	flex: 1;
 }
 
 #Container_gauche{
@@ -3216,6 +3216,56 @@ body{
 #Container_droit img{
 	height: 500px;
 	width: 100%;
+}
+
+#Container_docs{
+	flex: 1;
+	background-color: #FFF;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8%;
+	margin-bottom: 8%;
+	border-radius: 20px;
+
+
+}
+
+#ContainerTitre h1{
+	text-align: center;
+	margin-top: 3%;
+	color: grey;
+	font-weight: 500;
+	font-size: 23px;
+}
+
+#ContainerDownload{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+}
+
+#ContainerDownload a{
+	text-decoration: none;
+	color: grey;
+	font-weight: 500;
+
+}
+
+#ContainerDownload i{
+	margin-right: 5%;
+}
+
+#DOC_1{
+	border-top: solid grey 1px;
+	border-bottom: solid grey 1px;
+	padding: 20px;
+}
+
+#DOC_2{
+	border-bottom: solid grey 1px;
+	padding: 20px;
 }
 
 #welcome.onlymobile {
