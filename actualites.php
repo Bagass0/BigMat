@@ -92,12 +92,14 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
         </div>
         <div id="ContainerDownload">
             <div id="DOC_1">
-                <i class="fas fa-download" style="color: #9d969d;"></i>
-                <a href='documents/doc1.pdf' download>Document 1</a>
-            </div>    
-            <div id="DOC_2">
-                <i class="fas fa-download" style="color: #9d969d;"></i>
-                <a href='documents/doc2.pdf' download>Document 2</a>
+                <a href='documents/doc1.pdf' download>
+                    <i class="fas fa-download" style="color: #9d969d;"></i>Document 1
+                </a>
+            </div>  
+            <div id="DOC_2">  
+                <a href='documents/doc2.pdf' download>
+                    <i class="fas fa-download" style="color: #9d969d;"></i>Document 2
+                </a>
             </div>    
         </div>    
     </div>    

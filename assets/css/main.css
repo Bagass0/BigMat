@@ -137,9 +137,8 @@ table {
 }
 
 #one {
-
 	margin: 0 auto;
-	max-width: 1540px;
+	max-width: 1200px;
 	background-color: #FFF;
 	position: relative;
 	top: 100px;
@@ -1868,7 +1867,6 @@ h6 {
 	color: #000;
 	font-weight: 400;
 	line-height: 1.5;
-	margin: 0 0 1em 0;
 }
 
 h1 a,
