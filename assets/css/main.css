@@ -4609,6 +4609,65 @@ select[readonly] {
 	display: flex;
 	flex-direction: column;
 }
+
+.bgPages1 {
+	background-color: #FFF;
+	background-image: url('../../images/img.jpg');
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Style pour le fond de la page */
+.bgPages1 {
+    background-color: #FFF;
+    background-image: url('../../images/img.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+
+}
+
+/* Style pour le conteneur principal */
+#Container_plan {
+	flex: 1;
+    background-color: #FFF;
+    border-radius: 10px;
+    max-width: 70%;
+    margin: 4% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style pour le texte "Plan d'accès" */
+.Plan-text h1 {
+    color: #737070;
+    text-align: center;
+    font-size: 30px;
+	margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Style pour la carte Google Maps */
+#Container_plan iframe {
+    border: 0;
+    margin-top: 50px; /* Espacement supplémentaire vers le haut si nécessaire */
+    width: 100%;
+    max-width: 100%; /* La carte occupe toute la largeur du conteneur */
+    height: 450px;
+}
+
+/* Ajoutez d'autres styles CSS au besoin */
+
+
 .bgPages::after {
     content: "";
     background-image:  url('../../images/img.jpg'); /* Dégradé de fond transparent à moitié et image de fond */
