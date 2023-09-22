@@ -137,7 +137,8 @@ table {
 }
 
 #one {
-	margin: 0 auto;
+	margin: 20px auto;
+	padding: 0 10px;
 	max-width: 1200px;
 	background-color: #FFF;
 	position: relative;
@@ -2187,7 +2188,6 @@ textarea {
 	background: rgba(144, 144, 144, 0.075);
 	border-radius: 0;
 	border: none;
-	border: solid 1px #dbdbdb;
 	color: #000;
 	display: block;
 	outline: 0;
@@ -3007,7 +3007,7 @@ button:disabled,
 
 .headerP {
 	display: grid;
-	color: inherit;
+	color: #FFF;
 	text-decoration: none;
 	font-size: 0.8em;
 	font-weight: 500;
@@ -3017,6 +3017,14 @@ button:disabled,
 	z-index: 15;
 	margin: 0;
 	font-weight: 700;
+}
+
+.headerP:hover{
+	color: #FFD400;
+}
+
+.headerP:active{
+	color: #f8aa00;
 }
 
 #header a:last-child {
@@ -3151,6 +3159,8 @@ body{
 	margin: 0;
 	padding: 0;
 }
+
+/*----------------Hugo-----------------------*/
 
 .body_flex{
 	background-color: rgba(0, 0, 0, 0.6);
@@ -3308,7 +3318,7 @@ body{
 }
 
 #ContainerSubmit input{
-	background-color: orangered;
+	background-color: rgb(251, 118, 17);
 	color: white;
 	border-radius: 3px;
 	font-size: 13px;
@@ -3317,6 +3327,36 @@ body{
 
 #Page_contact{
 	flex: 1;
+}
+
+.Box_nav_user{
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+.Box_nav_user a{
+	background-color: rgb(251, 118, 17);
+	padding: 1px 5px;
+	margin: 8px 0;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.Box_nav_user a:hover{
+	background-color: rgb(252, 143, 59);
+}
+
+/*--------------------------------------------*/
+
+
+
+#welcome span{
+	background:rgba(251, 118, 17);
+	color: #ffffff;
+	border-radius: 4px;
+	margin: auto 5px;
+	transition: 0.5s;
 }
 
 #welcome.onlymobile {
@@ -3871,14 +3911,6 @@ body{
 
 }
 
-#welcome {
-	background: #e97d18;
-	color: #ffffff;
-	border-radius: 4px;
-	margin: auto 5px;
-	padding: 0.7em 1em 0.7em 1em;
-}
-
 
 #deconnexion {
 	background: #F4F4F4;
@@ -4242,7 +4274,6 @@ tfoot span {
 	background: #E9D9CE30 !important;
 	border-radius: 9px !important;
 	border: none;
-	border: solid 1px #dbdbdb;
 	display: block;
 	outline: 0;
 	padding: 0 1em;
