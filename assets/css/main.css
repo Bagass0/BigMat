@@ -3167,12 +3167,12 @@ body{
 #Container_accueil{
 	background-color: #FFF;
 	border-radius: 10px;
-	max-width: 65%;
+	max-width: 90%;
 	min-width: 65%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-top: 7%;
+	margin-bottom: 7%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -3182,8 +3182,8 @@ body{
 
 #Container_gauche{
 	align-items: center;
-	max-width: 60%;
-	min-width: 40%;
+	width: 400px;
+	margin-left: 10px;
 	display: flex;
 	flex-direction: column;
 }
@@ -3197,14 +3197,17 @@ body{
 }
 
 #Container_gauche h1{
-	font-weight: bold;
+	color: grey;
+	font-size: 20px;
+	font-weight: 600;
 	word-spacing: 3px;
-	flex: left;
+	margin-bottom: 15px;
 }
 
 #Container_gauche p{
-	font-family: Arial;
+	font-weight: 200;
 	word-spacing: normal;
+	color: grey;
 }
 
 #Container_droit{
@@ -3214,7 +3217,22 @@ body{
 
 #Container_droit img{
 	height: 500px;
-	width: 100%;
+	width: 120%;
+}
+
+@media screen and (max-width: 900px) {
+	#Container_droit img{
+		display: none;
+	}
+
+	#Container_accueil{
+		justify-content: center;
+		max-width: 55%;
+		min-width: 55%;
+		padding: 5px;
+		margin-top: 15%;
+		margin-bottom: 15%;
+	}
 }
 
 #Container_docs{
