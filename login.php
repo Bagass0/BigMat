@@ -104,14 +104,11 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 </head>
 
 <body class="bgLogin">
-
 	<section id="banner" style="background-image: url('images/img.jpg'); height:100%;">
-	<div><img src="images/logo.png" style="height:60px; width:15%;"></div>
-	<div id="background-color" style="background: rgba(0, 0, 0, 0.3); width: 100%; height: 50%; display: flex; justify-content: center; align-items: center;">
+	<div class="vertical-bar" style="background-color: rgba(0, 0, 0, 0.3); width: 50%; height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%);"></div>
+		<img src="images/logo.png" style="height:70px; width:10%;">
 			<div id="page_connect" class="page_connect">
-				<!-- <p style="background-color: #FFD400; color: #000; width: fit-content; margin-left: auto; margin-right: auto; padding: 0 0.5em 0 0.5em; font-weight: 700;">
-					Voyage courtage national
-				</p> -->
+				
 				<div id="connexion">
 					<form action="login.php" method="post" id="connect_form">
 						<div class="input-container">
@@ -135,9 +132,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 					echo "<p style='background:#ff0000; color:#000;'>" . $error . "</p>";
 				} ?>
 			</div>
-		</div>
+		</div>	
 	</section>
-
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
@@ -154,7 +150,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 			}
 		}
 	</script>
-
 </body>
 
 </html>

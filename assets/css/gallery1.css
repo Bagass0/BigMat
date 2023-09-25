@@ -23,13 +23,11 @@
   
 .gallery1 {
   display: flex;
-  flex:1;
 	flex-wrap: wrap;
   }
 
 /* Create four equal columns that sits next to each other */
 .gallery-item1 {
-    flex: 1;
 	  max-width: 25%;
 	  padding: 0 10px;
     padding-top: 50px;

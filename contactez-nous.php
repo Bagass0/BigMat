@@ -174,12 +174,12 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['valider'])) {
 					</div>
 				</div>
 			</form>
-
-
-		</div>
+																																	
+		</div>																																	
 	</section>
 
-	<?php include 'footer.php'; ?>
+	<div style="font-size: 16px;"><?php include 'footer.php'; ?></div>
+
 
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
