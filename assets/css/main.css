@@ -2002,6 +2002,11 @@ hr.major {
 
 }
 
+
+
+
+
+
 /* Section/Article */
 
 section.special,
@@ -2016,7 +2021,7 @@ article.special article {
 
 section.wrapper,
 article.wrapper {
-	padding: 2% 0;
+	padding: 8% 0;
 }
 
 section.wrapper header,
@@ -2188,7 +2193,7 @@ textarea {
 	border-radius: 0;
 	border: none;
 	border: solid 1px #dbdbdb;
-	color: #000;
+	color: rgb(254, 254, 254);
 	display: block;
 	outline: 0;
 	padding: 0 1em;
@@ -2330,7 +2335,7 @@ input[type="radio"]:checked+label:before {
 	font-style: normal;
 	font-variant: normal;
 	text-rendering: auto;
-	background: #FFD400;
+	background:#FF8C00;
 	border-color: #000;
 	color: #000;
 	content: '\f00c';
@@ -2760,7 +2765,7 @@ button,
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	background-color: transparent;
 	color: #000;
-	border-radius: 30px;
+	border-radius: 5px;
 	border: 0;
 	cursor: pointer;
 	display: inline-block;
@@ -2952,6 +2957,7 @@ button:disabled,
 	}
 
 }
+
 
 #header .logo {
 	color: #ffffff;
@@ -4930,15 +4936,18 @@ b {
 
 .labelProfil{
 	align-self: end;
+	width: auto;
 	margin: 0;
 	font-weight: 500 !important;
 	font-family: 'Source Sans Pro',	sans-serif !important;
 }
 
 .divProfil {
-	display: flex;
+	
 	margin-bottom: 1em;
 }
+
+
 
 @media screen and (max-width: 899px) {
 
@@ -4959,26 +4968,26 @@ b {
 .sourceSansPro {
 	font-family: 'Source Sans Pro',	sans-serif !important;
 }
-
+/* partie formulaire inscription (profil). Styles pour les champs de saisie */
 .inputProfil {
 	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	background: #FFF !important;
-	border: none !important;
-	border-bottom: solid 2px !important;
-	border-color: #000;
-	display: block;
-	outline: 0;
-	padding: 0 1em;
-	text-decoration: none;
-	color: #000;
-	height: 1.7em !important;
-	font-family: 'Source Sans Pro',	sans-serif !important;
-	outline: none !important;
-	outline-offset: 0px !important;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: #FF8C00!important; /* Couleur de fond jaune */
+    border: 1px solid #FF8C00!important; /* Bordure jaune */
+    border-radius: 0; /* Supprime la bordure arrondie */
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    outline: none !important;
+    outline-offset: 0px !important;
+    height: 1.7em !important;
 }
+
+	
+
 
 .inputProfil:active {
 	outline: none !important;
@@ -4987,7 +4996,7 @@ b {
 
 .inputProfil::placeholder {
 
-	color: rgb(140, 140, 140) !important;
+	color: rgb(213, 211, 211) !important;
 }
 
 .adressesMainBox {
