@@ -2987,6 +2987,38 @@ button:disabled,
 	margin-top: 4em;
 }
 
+
+/* Styles pour l'élément contenant l'image */
+.vertical-bar {
+    /* Vos styles existants pour la barre verticale */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+}
+
+/* Styles pour assombrir l'image */
+.vertical-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente (ajustez l'opacité selon vos besoins) */
+    z-index: 1; /* Placez le calque au-dessus de l'image */
+}
+
+/* Styles pour l'image */
+.vertical-bar img {
+    position: relative;
+    z-index: 2; /* Placez l'image au-dessus du calque */
+    height: 70px;
+    width: 10%;
+}
+
 #header .logo strong {
 	color: #000;
 	font-weight: 700;
@@ -4693,7 +4725,7 @@ select[readonly] {
     background-color: #FFF;
     border-radius: 10px;
     max-width: 70%;
-    margin: 4% auto;
+    margin: 9% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
