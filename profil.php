@@ -608,7 +608,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <br>
 
-                    <em class="em14" style="font-size: 9pt;color:grey;  font-family: 'Arial', sans-serif;">
+                    <em class="em14" style="font-size: 9pt;color:grey; margin-bottom:-40px;  font-family: 'Arial', sans-serif;">
 
                         <h3 style=" color:grey; font: weight 6px; font-size:13px; color:grey;" >Modalités d'inscription</h3><br>
                         Vos données personnelles sont traitées par Abeille Vie afin d'organiser le voyage courtage national 2023 sur la base de son intérêt légitime à gérer son réseau d’apporteurs. Les données relatives aux particularités alimentaires sont traitées sur la base de votre consentement.<br>
@@ -645,7 +645,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <ul style="text-align: left; margin: 0 auto 0 auto; max-width: 90%;" class="actions displayBtnProfil">
 
                         <li style="float: left;">
-                            <input <?php echo ($disable2) ?> id="btnValider" name="btnValider" style="background: #FF8C00; color:aliceblue; font-size:medium;" type="submit" value="Envoyer" class="special">
+                            <input <?php echo ($disable2) ?> id="btnValider" name="btnValider" style="background: #FF8C00; margin-bottom:100px;color:aliceblue; font-size:medium;" type="submit" value="Envoyer" class="special">
                             <label for="btnValider" class="labelProfil" style="margin-left: 1em;"></label>
                         </li>
                         <?php if ($_SESSION['droit'] == 1) { ?>
