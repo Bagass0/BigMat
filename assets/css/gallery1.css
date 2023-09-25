@@ -23,13 +23,11 @@
   
 .gallery1 {
   display: flex;
-  flex:1;
 	flex-wrap: wrap;
   }
 
 /* Create four equal columns that sits next to each other */
 .gallery-item1 {
-    flex: 1;
 	  max-width: 25%;
 	  padding: 0 10px;
     padding-top: 50px;
@@ -45,8 +43,6 @@
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
 	.gallery-item1 {
-	  -ms-flex: 50%;
-	  flex: 50%;
 	  max-width: 50%;
     justify-content: center;
 	}
@@ -55,8 +51,6 @@
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
 	.gallery-item1 {
-	  -ms-flex: 100%;
-	  flex: 100%;
 	  max-width: 100%;
     justify-content: center;
 	}

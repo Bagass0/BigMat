@@ -30,14 +30,14 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 </head>
 
-<body class="bgPages">
+<body class="body_flex">
 
 	<?php include 'header.php' ?>
 <!--
 	<section id="two" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 5em; margin-bottom: -7em;">
 		<h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> Informations Pratiques </h3>
 	</section> -->
-
+	<div class="contenu_principal">
 	<section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 2em; margin-top: 0 !important">
 		<div class="container-galerie">
 			<h1>Galerie</h1>
@@ -84,6 +84,7 @@ if ($dataGeneral["OPT_INFOSPRATIQUES"] != 1) {
 				</div>
 			</div>
 		</div>
+	</div>	
 	<!--
 		<div class="inner" style="max-width: 90%;">
 
