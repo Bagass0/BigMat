@@ -3013,7 +3013,7 @@ button:disabled,
 	color: #fff;
 }
 
-.headerP {
+.menuHeader {
 	display: grid;
 	color: #FFF;
 	text-decoration: none;
@@ -3100,14 +3100,6 @@ button:disabled,
 }
 
 /* Nav */
-
-@media screen and (max-width: 980px) {
-
-	#nav {
-		display: none;
-	}
-
-}
 
 #navPanel {
 	-moz-transform: translatex(20em);
@@ -3353,26 +3345,39 @@ body{
 	width: 100%;
 	background-color: rgb(251, 118, 17);
 	text-align: center;
-	padding-right: 10px;
 	margin: 8px 25px 10px 0;
 	border-radius: 3px;
 	transition: 0.5s;
+	overflow: hidden;
 }
 
 .Box_nav_user a:hover{
 	background-color: rgb(255, 175, 113);
 }
 
+.Box_nav_user a span{
+	padding:  0 10px;
+}
+
 .Navbar{
+	width: 100%;
+	height: auto;
 	position: absolute;
 	display: flex;
-	width: 100%;
 	justify-content: space-between;
+	align-items: center;
 	background-color: #00000076;
 }
 
 .Navbar img{
 	margin-left: 20%;
+	width: 10em;
+	align-items: center;
+}
+
+.event_link{
+	padding: 0;
+	margin: 0;
 }
 
 .Black_Color{
@@ -3383,6 +3388,21 @@ body{
 	display: flex;
 	justify-content: center; 
 	align-items: center;
+}
+
+@media screen and (max-width: 980px) {
+	#header{
+		display: none;
+	}
+}
+
+.active{
+	align-self: center;
+	color: #FF8C00;
+}
+
+.no_active{
+	color: #FFF;
 }
 
 /*--------------------------------------------*/
@@ -4038,10 +4058,6 @@ summernote
 
 
 @media screen and (max-width: 980px) {
-	#nav1 {
-		display: none;
-	}
-
 	#header .logo img {
 		margin-top: 1px;
 	}
@@ -4441,7 +4457,7 @@ tfoot span {
 .menuHeaderU:hover,
 .menuHeaderU:focus,
 .menuHeaderU:active {
-	color: #666666;
+	color: #ff7700;
 	text-decoration: none;
 	z-index: 15;
 }
