@@ -139,6 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $remarquesAliAcc = $fct->cleanXSS($_POST['remarquesAliAcc']);
     $conditions = $fct->cleanXSS($_POST['conditions']);
     $conditionsAcc = $fct->cleanXSS($_POST['conditionsAcc']);
+    $remarquesRegime = $fct->cleanXSS($_POST['remarquesRegime']);
+    $remarques = $fct->cleanXSS($_POST['remarques']);
+    $participeEve = $fct->cleanXSS($_POST['participeEve']);
+    $participeDej = $fct->cleanXSS($_POST['participeDej']);
+    $confirmeReservation = $fct->cleanXSS($_POST['confirmeReservation']);
+    $régimeAlimentaire = $fct->cleanXSS($_POST['régimeAlimentaire']);
+    $modalitésdinscription = $fct->cleanXSS($_POST['modalitésdinscription ']);
+
 
 
 
@@ -172,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($validation == "1") {
 
-                if (($civilite == "") or ($nom == "") or ($prenom == "") or ($agence == "") or ($tel == "") or ($dateNaiss == "") or ($lieuNaiss == "") or ($nationalite == "") or ($numPassport == "") or ($dateEmission == "") or ($lieuEmission == "") or ($dateExpiration == "")) {
+                if (($civilite == "") or ($nom == "") or ($prenom == "") or ($agence == "") or ($tel == "") or ($dateNaiss == "") or ($lieuNaiss == "") or ($nationalite == "") or ($numPassport == "") or ($dateEmission == "") or ($lieuEmission == "") or ($dateExpiration == "") or($remarquesRegime=="") or ($remarques =="") or ($participeEve== "") or ($participeDej=="") or ($confirmeReservation=="") or ( $régimeAlimentaire=="") or ($modalitésdinscription=="" )) {
 
                     $iserror = 1;
 
@@ -211,6 +219,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
                     if ($dateExpiration == "") {
                         echo '<style>input[name="dateExpiration"] {border-color: #FF0000 !important;}</style>';
+                    }
+                    if ($remarquesRegime == "") {
+                        echo '<style>input[name="remarquesRegime"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    }
+                    if ($remarques== "") {
+                        echo '<style>input[name="remarques"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    }
+                    
+                    if ($participeEve== "") {
+                        echo '<style>input[name="participeEve"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    }
+                    if ($participeDej== "") {
+                        echo '<style>input[name="participeDej"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    }
+                    if ($confirmeReservation == "") {
+                        echo '<style>input[name="confirmeReservation"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    }
+                    if ($régimeAlimentaire == "") {
+                        echo '<style>input[name="régimeAlimentaire"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    }
+                    if ($modalitésdinscription == "") {
+                        echo '<style>input[name="modalitésdinscription"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
                 }
 
@@ -311,7 +341,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $typeChambre = "Single";
                 }
 
-                $usr->updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre, $remarques, $remarquesAli, $civiliteAcc, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $accompagnement, $conditions, $conditionsAcc);
+                $usr->updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre, $remarques, $remarquesAli, $civiliteAcc, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $accompagnement, $conditions, $conditionsAcc,
+                $remarquesRegime,$remarques, $participeEve,$participeDej, $confirmeReservation, $régimeAlimentaire,$modalitésdinscription);
 
                 if ($validation == "1") {
                     include('checkMail.php');
@@ -357,6 +388,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data['REMARQUES_ALI_ACC'] = $remarquesAliAcc;
             $data['CONDITIONS'] = $conditions;
             $data['CONDITIONS_ACC'] = $conditionsAcc;
+            $data['REMARQUEREGIME'] = $remarquesRegime;
+            $data['REMARQUES'] = $remarques;
+            $data['PARTICIPEEVE'] = $participeEve;
+            $data['PARTICIPEDEJ'] = $participeDej;
+            $data['CONFIRMERESERVATION'] = $confirmeReservation;
+            $data['REGIMEALIMENTAIRE'] = $régimeAlimentaire;
+            $data['MODALITÉSDINSCRIPTION'] = $modalitésdinscription; 
         }
     }
 }
@@ -476,20 +514,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
 
 
-                    <!--first radio  continuer à faire des modifications-->                                                                                               
+                     <!-- il y a un bug sur les radios -->   
+                    <!--first radio  continuer à faire des modifications -->                                                                                               
                     <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em); ">   
                         <div for="conditions" class="conditions labelProfil" style="width: auto;">
                             <h5 style="align-self: end; width: auto; width: calc(100% - 6em);margin: 0; color:grey; font-weight: 500 !important; font-size:16px; font-family: 'Source Sans Pro',sans-serif !important;">Je participe à l'évenement AG et séminaire des dirigeants de Septembre 2022.</h5><br>
                         </div>
-
+                      
                         <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block; ">
-                            <input <?php echo ($disable) ?> type="radio" name="participeEve" id="oui" value="Oui" <?php if ($data['participeEve'] == "Oui") {
+                            <input <?php echo ($disable) ?> type="radio" name="participeEve" id="oui" value="Oui" <?php if ($data['PARTICIPEEVE'] == "Oui") {
                                                                                                                         echo 'checked';
                                                                                                                     } ?>>
                             <label class="labelProfil" for="oui">Oui*</label>
                         </div>
                         <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
-                            <input <?php echo ($disable) ?> type="radio" name="participeEve" id="non" value="Non" <?php if ($data['participeEve'] == "Non") {
+                            <input <?php echo ($disable) ?> type="radio" name="participeEve" id="non" value="Non" <?php if ($data['PARTICIPEEVE'] == "Non") {
                                                                                                                             echo 'checked';
                                                                                                                         } ?>>
                             <label class="labelProfil" for="non">Non*</label>
@@ -503,16 +542,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
 
                         <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
-                            <input <?php echo ($disable) ?> type="radio" name="participeDej" id="oui" value="Oui" <?php if ($data['participeDej'] == "Oui") {
+                            <input <?php echo ($disable) ?> type="radio" name="participeDej" id="Oui" value="Oui" <?php if ($data['PARTICIEDEJ'] == "Oui") {
                                                                                                                         echo 'checked';
                                                                                                                     } ?>>
-                            <label class="labelProfil" for="oui">Oui*</label>
+                            <label class="labelProfil" for="Oui">Oui*</label>
                         </div>
                         <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
-                            <input <?php echo ($disable) ?> type="radio" name="participeDej" id="non" value="Non" <?php if ($data['participeDej'] == "Non") {
+                            <input <?php echo ($disable) ?> type="radio" name="participeDej" id="Non" value="Non" <?php if ($data['PARTICIPEDEJ'] == "Non") {
                                                                                                                             echo 'checked';
                                                                                                                         } ?>>
-                            <label class="labelProfil" for="non">Non*</label>
+                            <label class="labelProfil" for="Non">Non*</label>
                         </div>
                     </div> <br>
 
@@ -524,16 +563,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
 
                         <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
-                            <input <?php echo ($disable) ?> type="radio" name="confirmeReservation" id="oui" value="Oui" <?php if ($data['confirmeReservation'] == "Oui") {
+                            <input <?php echo ($disable) ?> type="radio" name="confirmeReservation" id="oUi" value="Oui" <?php if ($data['CONFIRMERESERVATION'] == "Oui") {
                                                                                                                         echo 'checked';
                                                                                                                     } ?>>
-                            <label class="labelProfil" for="oui">Oui*</label>
+                            <label class="labelProfil" for="oUi">Oui*</label>
                         </div>
                         <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
-                            <input <?php echo ($disable) ?> type="radio" name="confirmeReservation" id="non" value="Non" <?php if ($data['confirmeReservation'] == "Non") {
+                            <input <?php echo ($disable) ?> type="radio" name="confirmeReservation" id="nOn" value="Non" <?php if ($data['CONFIRMERESERVATION'] == "Non") {
                                                                                                                             echo 'checked';
                                                                                                                         } ?>>
-                            <label class="labelProfil" for="non">Non*</label>
+                            <label class="labelProfil" for="nOn">Non*</label>
                         </div>
                     </div> <br>
 
@@ -546,29 +585,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
 
 
-                        <div> <!--continuer le responsive-->
+                         <!--continuer le responsive-->
 
                         <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; ">
-                            <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="pas-de-regime-particulier" value="Pas-de-regime-particulier" <?php if ($data['régimeAlimentaire'] == "pas-de-regime-particulier") {
+                            <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="pas-de-regime-particulier" value="Pas-de-regime-particulier" <?php if ($data['REGIMEALIMENTAIRE'] == "pas-de-regime-particulier") {
                                                                                                                         echo 'checked';
                                                                                                                     } ?>>
                             <label class="labelProfil" for="pas-de-regime-particulier">Pas de régime particulier</label>
                         </div>
                         <div class="container" style="display: flex; ">
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 130px; ">
-                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="végétarien" value="Végétarien" <?php if ($data['régimeAlimentaire'] == "Végétarien") {
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="végétarien" value="Végétarien" <?php if ($data['REGIMEALIMENTAIRE'] == "Végétarien") {
                                                                                                                                 echo 'checked';
                                                                                                                             } ?>>
                                 <label class="labelProfil" for="végétarien">Végétarien</label>
                             </div>
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 130px; ">
-                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-gluten" value="Sans-gluten" <?php if ($data['régimeAlimentaire'] == "Sans-gluten") {
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-gluten" value="Sans-gluten" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-gluten") {
                                                                                                                                 echo 'checked';
                                                                                                                             } ?>>
                                 <label class="labelProfil" for="sans-gluten">Sans gluten</label>
                             </div>
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em;">
-                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="autre" value="Autre" <?php if ($data['régimeAlimentaire'] == "Autre") {
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="autre" value="Autre" <?php if ($data['REGIMEALIMENTAIRE'] == "Autre") {
                                                                                                                                 echo 'checked';
                                                                                                                             } ?>>
                                 <label class="labelProfil" for="autre">Autre</label>
@@ -576,20 +615,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div style="display: flex;">
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 135px;">
-                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-porc" value="Sans-porc" <?php if ($data['régimeAlimentaire'] == "Sans-porc") {
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-porc" value="Sans-porc" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-porc") {
                                                                                                                                 echo 'checked';
                                                                                                                             } ?>>
                                 <label class="labelProfil" for="sans-porc">Sans porc</label>
                             </div>
                             
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em;">
-                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-crustacé" value="Sans-crustacé" <?php if ($data['régimeAlimentaire'] == "Sans-crustacé") {
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-crustacé" value="Sans-crustacé" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-crustacé") {
                                                                                                                                 echo 'checked';
                                                                                                                             } ?>>
                                 <label class="labelProfil" for="sans-crustacé">Sans crustacé</label>
                             </div>
                         </div>
-                        </div>
+                        
                       
                     </div> <br>
 
@@ -597,8 +636,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     
 
                     <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
-                        <label for="remarques" style="width: 100%;" class="labelProfil"></label>
-                        <textarea <?php echo ($readonly) ?> placeholder="Remarques" class="inputProfil" id="remarques" name="remarques" style="height: 9px;  line-height: 6px; !important; resize: none; "><?= $data['REMARQUES'] ?></textarea>
+                        <label for="remarquesRegime" style="width: 100%;" class="labelProfil"></label>
+                        <textarea <?php echo ($readonly) ?> placeholder="Remarques" class="inputProfil" id="remarquesRegime" name="remarques" style="height: 9px;  line-height: 6px; !important; resize: none; "><?= $data['REMARQUEREGIME'] ?></textarea>
                     </div>
                     
                     <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
@@ -622,13 +661,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em);">   
                        
                             <div class="2u 12u$(xsmall) divProfil" style="width: auto; padding-right: 55px;font-size:14px; margin-left: 0.5em;display: inline-block;">
-                                <input <?php echo ($disable) ?> type="radio" name="modalités-dinscription" id="jaccepte" value="Jaccepte" <?php if ($data['modalités-dinscription'] == "Jaccepte") {
+                                <input <?php echo ($disable) ?> type="radio" name="modalitésdinscription" id="jaccepte" value="Jaccepte" <?php if ($data['MODALITÉSDINSCRIPTION'] == "Jaccepte") {
                                                                                                                             echo 'checked';
                                                                                                                         } ?>>
                                 <label class="labelProfil" for="jaccepte">J'accepte</label>
                             </div>
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; font-size:14px; margin-left: 0.5em; display: inline-block;">
-                                <input <?php echo ($disable) ?> type="radio" name="modalités-dinscription" id="naccepte-pas" value="Naccepte-Pas" <?php if ($data['modalités-dinscription'] == "Naccepte-Pas") {
+                                <input <?php echo ($disable) ?> type="radio" name="modalitésdinscription" id="naccepte-pas" value="Naccepte-Pas" <?php if ($data['MODALITÉSDINSCRIPTION'] == "Naccepte-Pas") {
                                                                                                                                 echo 'checked';
                                                                                                                             } ?>>
                                 <label class="labelProfil" for="naccepte-pas">Je n'accepte pas</label>
