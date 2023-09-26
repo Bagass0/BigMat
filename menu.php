@@ -7,7 +7,7 @@
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class="'. $class .'">Accueil</p></a>';
+        echo '"><span class="'. $class .'">Accueil</span></a>';
     } ?>
 
 <?php $class = ($fichierPHP == "programme.php" ? 'active' : 'no_active');
@@ -16,7 +16,7 @@
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class=" '. $class .' ">Programme</p></a>';
+        echo '"><span class=" '. $class .' ">Programme</span></a>';
     } ?>
 
 <?php 
@@ -26,7 +26,7 @@ if ($dataGeneral['OPT_ACTUALITES'] == 1) {
     if ($_GET["event"] != "") {
         echo "?event=" . $_GET["event"] . "&view=admin";
     }
-            echo '"><p class=" '. $class .' ">Documents</p></a>';
+            echo '"><span class=" '. $class .' ">Documents</span></a>';
 } 
 ?>
     <?php $class = ($fichierPHP == "information.php" ? 'active' : 'no_active');
@@ -35,7 +35,7 @@ if ($dataGeneral['OPT_ACTUALITES'] == 1) {
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class=" '. $class .' ">Galerie</p></a>';
+        echo '"><span class=" '. $class .' ">Galerie</span></a>';
     } ?>
     <?php $class = ($fichierPHP == "mesures.php" ? 'active' : 'no_active');
     if ($dataGeneral['OPT_HEBERGEMENT'] == 1) {
@@ -43,7 +43,7 @@ if ($dataGeneral['OPT_ACTUALITES'] == 1) {
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class=" '. $class .' ">Mesures<br>sanitaires</p></a>';
+        echo '"><span class=" '. $class .' ">Mesures<br>sanitaires</span></a>';
     } ?>
     <?php $class = ($fichierPHP == "adresses.php" ? 'active' : 'no_active');
     if ($dataGeneral['OPT_PRESSE'] == 1) {
@@ -51,7 +51,7 @@ if ($dataGeneral['OPT_ACTUALITES'] == 1) {
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class=" '. $class .' ">Plan d\'accés</p></a>';
+        echo '"><span class=" '. $class .' ">Plan d\'accés</span></a>';
     } ?>
     <?php $class = ($fichierPHP == "contactez-nous.php" ? 'active' : 'no_active');
     if ($dataGeneral['OPT_CONTACT'] == 1) {
@@ -59,6 +59,6 @@ if ($dataGeneral['OPT_ACTUALITES'] == 1) {
         if ($_GET["event"] != "") {
             echo "?event=" . $_GET["event"] . "&view=admin";
         }
-        echo '"><p class=" '. $class .' ">Contact</p></a>';
+        echo '"><span class=" '. $class .' ">Contact</span></a>';
     } ?>
 <?php } ?>
