@@ -113,39 +113,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $agence = $fct->cleanXSS($_POST['agence']);
     $mail = $fct->cleanXSS($_POST['mail']);
     $tel = $fct->cleanXSS($_POST['tel']);
-    $dateNaiss = $fct->cleanXSS($_POST['dateNaiss']);
-    $lieuNaiss = $fct->cleanXSS($_POST['lieuNaiss']);
-    $nationalite = $fct->cleanXSS($_POST['nationalite']);
-    $numPassport = $fct->cleanXSS($_POST['numPassport']);
-    $dateEmission = $fct->cleanXSS($_POST['dateEmission']);
-    $lieuEmission = $fct->cleanXSS($_POST['lieuEmission']);
-    $dateExpiration = $fct->cleanXSS($_POST['dateExpiration']);
-    $typeChambre = $fct->cleanXSS($_POST['typeChambre']);
-    $remarques = $fct->cleanXSS($_POST['remarques']);
-    $remarquesAli = $fct->cleanXSS($_POST['remarquesAli']);
-    $civiliteAcc = $fct->cleanXSS($_POST['civiliteAcc']);
-    $nomAcc = $fct->cleanXSS($_POST['nomAcc']);
-    $prenomAcc = $fct->cleanXSS($_POST['prenomAcc']);
-    $mailAcc = $fct->cleanXSS($_POST['mailAcc']);
-    $telAcc = $fct->cleanXSS($_POST['telAcc']);
-    $dateNaissAcc = $fct->cleanXSS($_POST['dateNaissAcc']);
-    $lieuNaissAcc = $fct->cleanXSS($_POST['lieuNaissAcc']);
-    $nationaliteAcc = $fct->cleanXSS($_POST['nationaliteAcc']);
-    $numPassportAcc = $fct->cleanXSS($_POST['numPassportAcc']);
-    $dateEmissionAcc = $fct->cleanXSS($_POST['dateEmissionAcc']);
-    $lieuEmissionAcc = $fct->cleanXSS($_POST['lieuEmissionAcc']);
-    $dateExpirationAcc = $fct->cleanXSS($_POST['dateExpirationAcc']);
-    $remarquesAcc = $fct->cleanXSS($_POST['remarquesAcc']);
-    $remarquesAliAcc = $fct->cleanXSS($_POST['remarquesAliAcc']);
-    $conditions = $fct->cleanXSS($_POST['conditions']);
-    $conditionsAcc = $fct->cleanXSS($_POST['conditionsAcc']);
+
     $remarquesRegime = $fct->cleanXSS($_POST['remarquesRegime']);
     $remarques = $fct->cleanXSS($_POST['remarques']);
     $participeEve = $fct->cleanXSS($_POST['participeEve']);
     $participeDej = $fct->cleanXSS($_POST['participeDej']);
     $confirmeReservation = $fct->cleanXSS($_POST['confirmeReservation']);
     $régimeAlimentaire = $fct->cleanXSS($_POST['régimeAlimentaire']);
-    $modalitésdinscription = $fct->cleanXSS($_POST['modalitésdinscription ']);
+    $rgpd = $fct->cleanXSS($_POST['rgpd']);
+   
+    
+
 
 
 
@@ -180,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($validation == "1") {
 
-                if (($civilite == "") or ($nom == "") or ($prenom == "") or ($agence == "") or ($tel == "") or ($dateNaiss == "") or ($lieuNaiss == "") or ($nationalite == "") or ($numPassport == "") or ($dateEmission == "") or ($lieuEmission == "") or ($dateExpiration == "") or($remarquesRegime=="") or ($remarques =="") or ($participeEve== "") or ($participeDej=="") or ($confirmeReservation=="") or ( $régimeAlimentaire=="") or ($modalitésdinscription=="" )) {
+                if (($civilite == "") or ($nom == "") or ($prenom == "") or ($agence == "") or ($tel == "") or($remarquesRegime=="") or ($remarques =="") or ($participeEve== "") or ($participeDej=="") or ($confirmeReservation=="") or ( $régimeAlimentaire=="") or ($rgpd=="" )) {
 
                     $iserror = 1;
 
@@ -199,27 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if ($tel == "") {
                         echo '<style>input[name="tel"] {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($dateNaiss == "") {
-                        echo '<style>input[name="dateNaiss"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuNaiss == "") {
-                        echo '<style>input[name="lieuNaiss"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($nationalite == "") {
-                        echo '<style>input[name="nationalite"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($numPassport == "") {
-                        echo '<style>input[name="numPassport"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateEmission == "") {
-                        echo '<style>input[name="dateEmission"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuEmission == "") {
-                        echo '<style>input[name="lieuEmission"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateExpiration == "") {
-                        echo '<style>input[name="dateExpiration"] {border-color: #FF0000 !important;}</style>';
-                    }
+                    
                     if ($remarquesRegime == "") {
                         echo '<style>input[name="remarquesRegime"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
@@ -239,88 +197,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if ($régimeAlimentaire == "") {
                         echo '<style>input[name="régimeAlimentaire"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($modalitésdinscription == "") {
-                        echo '<style>input[name="modalitésdinscription"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    if ($rgpd == "") {
+                        echo '<style>input[name="rgpd"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
+                  
                 }
 
-                if (($data['SINGLE'] == "Non") and (($typeChambre == "") or ($civiliteAcc == "") or ($nomAcc == "") or ($prenomAcc == "") or ($mailAcc == "") or ($telAcc == "") or ($dateNaissAcc == "") or ($lieuNaissAcc == "") or ($nationaliteAcc == "") or ($numPassportAcc == "") or ($dateEmissionAcc == "") or ($lieuEmissionAcc == "") or ($dateExpirationAcc == ""))) {
+                
 
-                    $iserror = 1;
-                    
-                    if ($typeChambre == "") {
-                        echo '<style>input[name="typeChambre"] + label:before  {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($civiliteAcc == "") {
-                        echo '<style>input[name="civiliteAcc"] + label:before  {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($nomAcc == "") {
-                        echo '<style>input[name="nomAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($prenomAcc == "") {
-                        echo '<style>input[name="prenomAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($mailAcc == "") {
-                        echo '<style>input[name="mailAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($telAcc == "") {
-                        echo '<style>input[name="telAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateNaissAcc == "") {
-                        echo '<style>input[name="dateNaissAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuNaissAcc == "") {
-                        echo '<style>input[name="lieuNaissAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($nationaliteAcc == "") {
-                        echo '<style>input[name="nationaliteAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($numPassportAcc == "") {
-                        echo '<style>input[name="numPassportAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateEmissionAcc == "") {
-                        echo '<style>input[name="dateEmissionAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuEmissionAcc == "") {
-                        echo '<style>input[name="lieuEmissionAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateExpirationAcc == "") {
-                        echo '<style>input[name="dateExpirationAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                }
-
-                if (($data['UPLOAD_PHOTO'] == "" || $data['UPLOAD_PHOTO'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger votre photo !");
-                    echo '<style>label[name="divFil-trombi"] {text-decoration: underline 2px red; !important;}</style>';
-                }
-
-                if (($data['UPLOAD_PASSPORT'] == "" || $data['UPLOAD_PASSPORT'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger votre passport ou CNI !");
-                    echo '<style>label[name="divFil-identite"] {text-decoration: underline 2px red; !important;}</style>';
-                }
-
-                if (($data['SINGLE'] == "Non") and ($data['UPLOAD_PHOTO_ACC'] == "" || $data['UPLOAD_PHOTO_ACC'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger la photo de votre accompagnant !");
-                    echo '<style>label[name="divFil-trombi-acc"] {text-decoration: underline 2px red;!important;}</style>';
-                }
-
-                if (($data['SINGLE'] == "Non") and ($data['UPLOAD_PASSPORT_ACC'] == "" || $data['UPLOAD_PASSPORT_ACC'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger le passport ou CNI de votre accompagnant !");
-                    echo '<style>label[name="divFil-identite-acc"] {text-decoration: underline 2px red;!important;}</style>';
-                }
-
-                if ($iserror == 1) {
-                    $color = "#FF0000";
-                    array_push($errors, "Tous les champs obligatoires n'ont pas été remplis !<br>Pour valider l'inscription vous devez tous les compléter.");
-                }
+               
             }
 
             $checkMail = $usr->selectMailDoublon($id, $mail);
@@ -341,8 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $typeChambre = "Single";
                 }
 
-                $usr->updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre, $remarques, $remarquesAli, $civiliteAcc, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $accompagnement, $conditions, $conditionsAcc,
-                $remarquesRegime,$remarques, $participeEve,$participeDej, $confirmeReservation, $régimeAlimentaire,$modalitésdinscription);
+                $usr->updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre,$remarques, $remarquesAli, $civiliteAcc,$remarquesRegime, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $conditions, $conditionsAcc, $participeEve,$participeDej,$confirmeReservation,$régimeAlimentaire, $rgpd);
 
                 if ($validation == "1") {
                     include('checkMail.php');
@@ -373,6 +257,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data['REMARQUES'] = $remarques;
             $data['REMARQUES_ALI'] = $remarquesAli;
             $data['CIVILITE_ACC'] = $civiliteAcc;
+            $data['REMARQUESREGIME'] = $remarquesRegime;
             $data['NOM_ACC'] = $nomAcc;
             $data['PRENOM_ACC'] = $prenomAcc;
             $data['MAIL_ACC'] = $mailAcc;
@@ -388,15 +273,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data['REMARQUES_ALI_ACC'] = $remarquesAliAcc;
             $data['CONDITIONS'] = $conditions;
             $data['CONDITIONS_ACC'] = $conditionsAcc;
-            $data['REMARQUEREGIME'] = $remarquesRegime;
-            $data['REMARQUES'] = $remarques;
             $data['PARTICIPEEVE'] = $participeEve;
             $data['PARTICIPEDEJ'] = $participeDej;
             $data['CONFIRMERESERVATION'] = $confirmeReservation;
             $data['REGIMEALIMENTAIRE'] = $régimeAlimentaire;
-            $data['MODALITÉSDINSCRIPTION'] = $modalitésdinscription; 
+            $data['RGPD'] = $rgpd;
+           
         }
     }
+
 }
 ?>
 
@@ -637,7 +522,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
                         <label for="remarquesRegime" style="width: 100%;" class="labelProfil"></label>
-                        <textarea <?php echo ($readonly) ?> placeholder="Remarques" class="inputProfil" id="remarquesRegime" name="remarques" style="height: 9px;  line-height: 6px; !important; resize: none; "><?= $data['REMARQUEREGIME'] ?></textarea>
+                        <textarea <?php echo ($readonly) ?> placeholder="remarquesRegime" class="inputProfil" id="remarquesRegime" name="remarquesRegime" style="height: 9px;  line-height: 6px; !important; resize: none; "><?= $data['REMARQUESREGIME'] ?></textarea>
                     </div>
                     
                     <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
@@ -658,22 +543,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         Ces droits peuvent être exercés auprès du délégué à la protection des données, en précisant dans l’objet de la demande « Voyage courtage national 2023 »,à l’adresse : dpo.france@abeille-assurances.fr.<br>
                         Vous disposez également du droit d'introduire une réclamation auprès de la CNIL.<br> <br><br>
 
-                        <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em);">   
-                       
-                            <div class="2u 12u$(xsmall) divProfil" style="width: auto; padding-right: 55px;font-size:14px; margin-left: 0.5em;display: inline-block;">
-                                <input <?php echo ($disable) ?> type="radio" name="modalitésdinscription" id="jaccepte" value="Jaccepte" <?php if ($data['MODALITÉSDINSCRIPTION'] == "Jaccepte") {
+                    </em>
+
+
+                    <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em); ">   
+                      
+                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block; ">
+                            <input <?php echo ($disable) ?> type="radio" name="rgpd" id="accepter" value="Accepter" <?php if ($data['RGPD'] == "Accepter") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?>>
+                            <label class="labelProfil" for="accepter">J'accepte*</label>
+                        </div>
+                        <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="rgpd" id="accepterpas" value="AccepterPas" <?php if ($data['RGPD'] == "AccepterPas") {
                                                                                                                             echo 'checked';
                                                                                                                         } ?>>
-                                <label class="labelProfil" for="jaccepte">J'accepte</label>
-                            </div>
-                            <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; font-size:14px; margin-left: 0.5em; display: inline-block;">
-                                <input <?php echo ($disable) ?> type="radio" name="modalitésdinscription" id="naccepte-pas" value="Naccepte-Pas" <?php if ($data['MODALITÉSDINSCRIPTION'] == "Naccepte-Pas") {
-                                                                                                                                echo 'checked';
-                                                                                                                            } ?>>
-                                <label class="labelProfil" for="naccepte-pas">Je n'accepte pas</label>
-                            </div>
-                        </div> <br>
-                    </em>
+                            <label class="labelProfil" for="accepterpas">Je n'accepte pas*</label>
+                        </div>
+                    </div> <br>
+
+
+                   <br>
 
                 </div><br>
 

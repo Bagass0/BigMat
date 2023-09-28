@@ -126,7 +126,7 @@ class User extends Model {
 	}
 
     
-	public function updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre,$remarquesAli, $civiliteAcc, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $accompagnement, $conditions, $conditionsAcc,$remarquesRegime, $remarques, $participeEve,$participeDej, $confirmeReservation, $régimeAlimentaire,$modalitésdinscription)
+	public function updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre,$remarques, $remarquesAli, $civiliteAcc,$remarquesRegime, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $conditions, $conditionsAcc, $participeEve,$participeDej,$confirmeReservation,$régimeAlimentaire, $rgpd)
 	{
 		$id = intval($id);
 		$validation = mysqli_real_escape_string($this->mysqli, $validation);
@@ -144,8 +144,10 @@ class User extends Model {
 		$lieuEmission = mysqli_real_escape_string($this->mysqli, $lieuEmission);
 		$dateExpiration = mysqli_real_escape_string($this->mysqli, $dateExpiration);
 		$typeChambre = mysqli_real_escape_string($this->mysqli, $typeChambre);
+		$remarques = mysqli_real_escape_string($this->mysqli, $remarques);
 		$remarquesAli = mysqli_real_escape_string($this->mysqli, $remarquesAli);
 		$civiliteAcc = mysqli_real_escape_string($this->mysqli, $civiliteAcc);
+		$remarquesRegime = mysqli_real_escape_string($this->mysqli, $remarquesRegime);	
 		$nomAcc = mysqli_real_escape_string($this->mysqli, $nomAcc);
 		$prenomAcc = mysqli_real_escape_string($this->mysqli, $prenomAcc);
 		$mailAcc = mysqli_real_escape_string($this->mysqli, $mailAcc);
@@ -159,16 +161,14 @@ class User extends Model {
 		$dateExpirationAcc = mysqli_real_escape_string($this->mysqli, $dateExpirationAcc);
 		$remarquesAcc = mysqli_real_escape_string($this->mysqli, $remarquesAcc);
 		$remarquesAliAcc = mysqli_real_escape_string($this->mysqli, $remarquesAliAcc);
-		$accompagnement = mysqli_real_escape_string($this->mysqli, $accompagnement);
 		$conditions = mysqli_real_escape_string($this->mysqli, $conditions);
 		$conditionsAcc = mysqli_real_escape_string($this->mysqli, $conditionsAcc);
-		$remarquesRegime = mysqli_real_escape_string($this->mysqli, $remarquesRegime);
-		$remarques = mysqli_real_escape_string($this->mysqli, $remarques);
 		$participeEve= mysqli_real_escape_string($this->mysqli,$participeEve);
 		$participeDej = mysqli_real_escape_string($this->mysqli,$participeDej);
 		$confirmeReservation= mysqli_real_escape_string($this->mysqli, $confirmeReservation);
 		$régimeAlimentaire = mysqli_real_escape_string($this->mysqli,$régimeAlimentaire);
-		$modalitésdinscription = mysqli_real_escape_string($this->mysqli,$modalitésdinscription);
+		$rgpd = mysqli_real_escape_string($this->mysqli,$rgpd);
+		
 
 		$sql = "UPDATE `USERS` SET 
 					PARTICIPATION = '$validation',
@@ -186,9 +186,10 @@ class User extends Model {
 				    LIEU_EMISSION = '$lieuEmission',
 				    DATE_EXPIRATION = '$dateExpiration',
 				    TYPE_CHAMBRE = '$typeChambre',
-				    REMARQUES = '$remarques',
+					REMARQUES = '$remarques',
 				    REMARQUES_ALI = '$remarquesAli',
 				    CIVILITE_ACC = '$civiliteAcc',
+					REMARQUESREGIME = '$remarquesRegime',
 				    NOM_ACC = '$nomAcc',
 				    PRENOM_ACC = '$prenomAcc',
 				    MAIL_ACC = '$mailAcc',
@@ -202,16 +203,13 @@ class User extends Model {
 				    DATE_EXPIRATION_ACC = '$dateExpirationAcc',
 				    REMARQUES_ACC = '$remarquesAcc',
 				    REMARQUES_ALI_ACC = '$remarquesAliAcc',
-					ACCOMPAGNEMENT = '$accompagnement',
                     CONDITIONS = '$conditions',
                     CONDITIONS_ACC = '$conditionsAcc',
-					REMARQUESREGIME = '$remarquesRegime',
-				    REMARQUES = '$remarques',
 					PARTICIPEEVE = '$participeEve',
 					PARTICIPEDEJ = '$participeDej',
 					CONFIRMERESERVATION = '$confirmeReservation',
 					REGIMEALIMENTAIRE = '$régimeAlimentaire',
-					MODALITÉSDINSCRIPTION = '$modalitésdinscription',
+					RGPD= '$rgpd',
 					LAST_SAVE = CURRENT_TIMESTAMP 
 					WHERE ID = $id";
 
