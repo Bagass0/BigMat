@@ -135,7 +135,6 @@ if ($dataGeneral["OPT_ACCUEIL"] != 1) {
             });
         });
     </script>
-
     <?php include 'footer.php' ?>    
 </body>
 

@@ -10,8 +10,8 @@ $isValid = $entreprise->isValidById($data['SOCIETE_ID']);
 if (($data["FIRST_CO"] == 1) || ($data1["FIRST_CO"] == 1) or $data1['GROUPE'] === 'ADMIN' || $data['GROUPE'] === 'ADMIN') {
 
     if (($_SESSION['droit'] == 1) && ($_GET["idColaborateur"] != "")) { ?>
-        <a href="profil.php"> <span><?php echo $data1['PRENOM'] . " " . $data1['NOM'] ?></span></a>
-        <a href="deconnexion.php"> <span>Déconnexion</span></a>    
+        <a href="profil.php"> <?php echo $data1['PRENOM'] . " " . $data1['NOM'] ?></a>
+        <a href="deconnexion.php"> Déconnexion</a>    
     <?php } elseif ($_SESSION['id'] !== null) { ?>
         <?php if (($_GET["view"] != "") || ($_SESSION['droit'] != 1) && ($isValid[0] == 1)) {
         } 

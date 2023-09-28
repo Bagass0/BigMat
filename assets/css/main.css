@@ -3058,10 +3058,6 @@ button:disabled,
 		height: 50px;
 	}
 
-	#header {
-		height: 50px !important;
-	}
-
 	#header a.navPanelToggle {
 		display: inline-block;
 	}
@@ -3164,7 +3160,6 @@ body{
 /*----------------Hugo-----------------------*/
 
 .body_flex{
-	background-color: rgba(0, 0, 0, 0.6);
 	background-image: url(../../images/img.jpg);
 	background-size: cover;
     background-position: center; 
@@ -3334,20 +3329,18 @@ body{
 	flex: 1;
 }
 
-.Box_nav_user{
-	display: flex;
-	flex-direction: column;
-	width: 10%;
-}
-
 .Box_nav_user a{
-	width: 100%;
+	display: inline-block;
+	white-space: nowrap;
 	background-color: rgb(251, 118, 17);
-	text-align: center;
 	margin: 8px 25px 10px 0;
 	border-radius: 3px;
 	transition: 0.5s;
 	overflow: hidden;
+}
+
+.Box_nav_user a span{
+	font-size: 10px;
 }
 
 .Box_nav_user a:hover{
@@ -3375,12 +3368,16 @@ body{
 	position: absolute;
 	display: flex;
 	align-items: center;
-	background-color: #00000076;
+	background-color: #00000089;
 }
 
 .Navbar img{
 	width: 10em;
+}
 
+.Navbar a {
+	width: auto;
+	margin-left: 30px;
 }
 
 .Black_Color{
@@ -3393,12 +3390,6 @@ body{
 	align-items: center;
 }
 
-@media screen and (max-width: 980px) {
-	#header{
-		display: none;
-	}
-}
-
 .active{
 	align-self: center;
 	color: #FF8C00;
@@ -3406,6 +3397,61 @@ body{
 
 .no_active{
 	color: #FFF;
+}
+
+.no_active:hover{
+	color: #FF8C00;
+}
+
+@media screen and (max-width: 500px) {
+	#header{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1160px) {
+	.Box_nav_events, .Box_nav_user{
+		display: none;
+	}
+
+	.Navbar{
+		justify-content: space-between;
+	}
+
+	.Navbar img {
+		margin: 5px 0;
+	}
+
+	.bars_menu_burger{
+		width: 100%;
+		display: flex!important;
+		justify-content: end;
+	}
+
+	.menu-toggle-active{
+		color: rgb(0, 0, 0);
+		display: flex!important;
+		flex-direction: column;
+		width: 100vh;
+		position: absolute;
+		justify-content: center;
+		backdrop-filter: blur(5px);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+.bars_menu_burger{
+	content: "";
+	display: none;
+	margin-right: 3%;
+}
+
+.menu-toggle{
+
+	display: none;
 }
 
 /*--------------------------------------------*/
@@ -3564,29 +3610,6 @@ body{
 
 }
 
-@media screen and (max-width: 1680px) {
-
-	#banner .flex div {
-		padding: 0 6em;
-	}
-
-}
-
-@media screen and (max-width: 1280px) {
-
-	#banner {
-		padding: 6em 0 4em 0;
-	}
-
-	#banner .inner {
-		padding-top: 0em;
-	}
-
-	#banner .flex div {
-		padding: 0 3em;
-	}
-
-}
 
 @media screen and (max-width: 980px) {
 
@@ -3596,9 +3619,6 @@ body{
 		top: 50px !important;
 	}
 
-	#banner .inner {
-		padding-top: 0em;
-	}
 
 	#banner h1 {
 		font-size: 2.5em;

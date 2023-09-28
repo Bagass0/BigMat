@@ -181,34 +181,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['valider'])) {
 	<div style="font-size: 16px;"><?php include 'footer.php'; ?></div>
 
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/flipclock.min.js"></script>
-	<script type="text/javascript">
-		var clock;
-
-		$(document).ready(function() {
-
-			var currentDate = new Date();
-
-			var futureDate = new Date(2023, 04, 15);
-
-			var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-			if (diff == 0 | diff < 0) {
-				diff = 0;
-			}
-
-			clock = $('.clock').FlipClock(diff, {
-				clockFace: 'DailyCounter',
-				countdown: true
-			});
-		});
-	</script>
-
-
 </body>
 
 </html>
