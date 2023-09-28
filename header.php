@@ -21,8 +21,8 @@ require_once './connect_societe.php';
 
         <div class="bars_menu_burger">
           <i class="fas fa-bars fa-2xl" style="color: #fdfffc;  font-size: 30px;"></i>
-			</div>
-        </div>
+			  </div>
+        
       </div>
     </nav>
   </div> 
