@@ -4771,7 +4771,30 @@ select[readonly] {
     background-position: center bottom;
     background-repeat: no-repeat;
     z-index: -1; /* Placer l'élément en dessous de .bgPages */
+	
 }
+
+@media (max-width: 768px) {
+    .bgPages::after {
+        background-position: center top; /* Positionnement en haut sur les écrans plus petits */
+    }
+}
+@media (max-width: 480px) {
+    .bgPages::after {
+        background-position: center top;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bgPages::after {
+        background-position: center top;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .bgPages::after {
+        background-position: center top;
+    }
+}
+
 
 .bgAccueil {
 	background-color: #FFF;
@@ -5039,6 +5062,9 @@ b {
 	.divProfil {
 		width: 100% !important;
 	}
+	.container {
+        flex-direction: column;
+    }
 
 }
 
