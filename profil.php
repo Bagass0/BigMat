@@ -308,7 +308,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php include 'header.php' ?>
 
-    <section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 0 !important">
+    <section id="one" class="wrapper align-left" style="border-radius: 1em;  display: flex;  flex: 1; max-width: 80%;
+    min-width: 55%; padding-top: 5em; margin-top: 0 !important">
 
         <div class="inner">
 
@@ -472,12 +473,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                          <!--continuer le responsive-->
 
-                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; ">
-                            <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="pas-de-regime-particulier" value="Pas-de-regime-particulier" <?php if ($data['REGIMEALIMENTAIRE'] == "pas-de-regime-particulier") {
-                                                                                                                        echo 'checked';
-                                                                                                                    } ?>>
-                            <label class="labelProfil" for="pas-de-regime-particulier">Pas de régime particulier</label>
+                         <div class="container" style="display: flex; ">
+                            <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; ">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="pas-de-regime-particulier" value="Pas-de-regime-particulier" <?php if ($data['REGIMEALIMENTAIRE'] == "pas-de-regime-particulier") {
+                                                                                                                            echo 'checked';
+                                                                                                                        } ?>>
+                                <label class="labelProfil" for="pas-de-regime-particulier">Pas de régime particulier</label>
+                            </div>
                         </div>
+                      
                         <div class="container" style="display: flex; ">
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 130px; ">
                                 <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="végétarien" value="Végétarien" <?php if ($data['REGIMEALIMENTAIRE'] == "Végétarien") {
@@ -498,7 +502,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <label class="labelProfil" for="autre">Autre</label>
                             </div>
                         </div>
-                        <div style="display: flex;">
+                        <div class="container"  style="display: flex;">
                             <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 135px;">
                                 <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-porc" value="Sans-porc" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-porc") {
                                                                                                                                 echo 'checked';
