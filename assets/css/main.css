@@ -3429,18 +3429,28 @@ body{
 	}
 
 	.menu-toggle-active{
-		color: rgb(0, 0, 0);
 		display: flex!important;
 		flex-direction: column;
-		width: 100vh;
-		position: absolute;
+		width: 100vw; /* Utiliser vw pour spécifier 100% de la largeur de la fenêtre */
+		height: 90vh; /* Utiliser vh pour spécifier 100% de la hauteur de la fenêtre */
+		padding-bottom: 0; /* Supprimer la marge inférieure */
+		position: fixed!important; /* Utiliser fixed pour garantir qu'il couvre toute la fenêtre */
 		justify-content: center;
+		background-color: #00000029;
 		backdrop-filter: blur(5px);
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		bottom: 0; /* Aligner en haut de la fenêtre */
+		left: 0; /* Aligner à gauche de la fenêtre */
 	}
 
+	.menu_toggle_user a span{
+		margin: 0;
+		color: #FF8C00;
+		width: 100%;
+	}
+
+	.menu_toggle_events a span{
+		width: 100%;
+	}
 }
 
 .bars_menu_burger{

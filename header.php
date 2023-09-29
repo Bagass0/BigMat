@@ -28,8 +28,15 @@ require_once './connect_societe.php';
   </div> 
   <div class="menu-toggle">
       <div class="menu-toggle-active">
-					<?php include 'menu1.php'; ?>
+
+        <div class="menu_toggle_events">
 					<?php include 'menu.php' ; ?>
+        </div>
+
+        <div class="menu_toggle_user">
+					<?php include 'menu1.php'; ?>
+        </div>  
+
       </div>    
 	</div>	 
 </header>
