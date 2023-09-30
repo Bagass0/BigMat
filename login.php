@@ -96,6 +96,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main-login.css" />
 	<link rel="icon" href="images/favicon.ico" type="image/png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -103,36 +104,43 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 </head>
 
 <body class="bgLogin">
-
-	<section id="banner" style="background-image: url('images/bg_black.jpg'); height:100%;">
-		<div id="page_connect" class="boxLogin">
-			<!-- <p style="background-color: #FFD400; color: #000; width: fit-content; margin-left: auto; margin-right: auto; padding: 0 0.5em 0 0.5em; font-weight: 700;">
-				Voyage courtage national
-			</p> -->
-			<div id="connexion">
-				<form action="login.php" method="post" id="connect_form">
-					<input type="text" name="email" id="email" value="" placeholder="Email" class="12u$" style="margin-bottom:20px; color:#1e2336;">
-					<input type="password" name="connect" id="connect" value="" placeholder="Mot de passe" class="12u$" style="margin-bottom:20px; color:#1e2336;">
-					<div class="12u$">
-						<input type="checkbox" class="checkbox" id="checkbox" style="margin-bottom:20px; color:#1e2336;">
-						<label for="checkbox" class="checkbox" onclick="affichageMDP()">Afficher le mot de passe</label>
+	<section id="banner" style="background-image: url('images/img.jpg'); height:100%;">
+		<div class="vertical-bar" style="background-color: rgba(0, 0, 0, 0.3); width: 50%; height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%);"></div>
+			<img src="images/logo.png" style="height:70px; width:10%;  position: absolute; right:867.6px; ">
+				<div id="page_connect" class="page_connect">
+					
+					<div id="connexion">
+						<form action="login.php" method="post" id="connect_form">
+							<div class="input-container">
+								<span class="icon-envelope"><i class="fa-solid fa-envelope"></i></span>
+								<input type="text" name="email" id="email" value="" placeholder="Email" class="12u$" style="margin-bottom:20px; color:#1e2336;">
+							</div>
+							<div class="input-container">
+								<span class="icon"><i class="fa-solid fa-lock" ></i></span>
+								<input type="password" name="connect" id="connect" value="" placeholder="Mot de passe" class="12u$" style="margin-bottom:20px; color:#1e2336;">
+							</div>
+							<!--
+							<div class="12u$">
+								<input type="checkbox" class="checkbox" id="checkbox" style="margin-bottom:20px; color:#1e2336;">
+								<label for="checkbox" class="checkbox" onclick="affichageMDP()">Afficher le mot de passe</label>
+							</div>-->
+							<input type="submit" value="Connexion" class="special" style="background: linear-gradient(to right, #F97613,#F97613); color: #ffffff; font-weight: 700;" name="connexion">
+						</form>
 					</div>
-					<input type="submit" value="Connexion" class="special" style="background: linear-gradient(to right, #FFD400, #FFD400); color: #000; font-weight: 700;" name="connexion">
-				</form>
-			</div>
-			<p><a href="forget.php" style="color: #000;">Mot de passe oublié ?</a></p>
-			<?php if ($error != "") {
-				echo "<p style='background:#ff0000; color:#000;'>" . $error . "</p>";
-			} ?>
-		</div>
+					<p><a href="forget.php" style="color: #ffffff; font-family:system-ui; font-weight:bold;">Mot de passe oublié ?</a></p>
+					<?php if ($error != "") {
+						echo "<p style='background:#ff0000; color:#000;'>" . $error . "</p>";
+					} ?>
+				</div>
+		</div>	
 	</section>
-
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
 	<script>
+		// cette partie là pour le afficher le mot de passe
 		function affichageMDP() {
 			var x = document.getElementById("connect");
 			if (x.type === "password") {
@@ -142,7 +150,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['connexion'])) {
 			}
 		}
 	</script>
-
 </body>
 
 </html>

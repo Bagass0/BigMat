@@ -105,18 +105,12 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['valider'])) {
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 </head>
 
-<body class="bgPages">
+<body class="body_flex">
 
 	<?php include 'header.php' ?>
-
-	<section id="two" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 5em; margin-bottom: -7em;">
-		<h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> Contact </h3>
-	</section>
-
-	<section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 0 !important">
-
-		<div class="inner" style="max-width: 90%;">
-
+	<section id="Page_contact" class="wrapper align-left">
+		<div id="Form_contact" style="max-width: 90%;">
+			<h1>Contact</h1>
 			<?php if ($error != "") { ?>
 				<div class="box" style="border-color:<?php echo $color; ?>; margin-top: 2em;">
 					<p style="color:<?php echo $color; ?>;"><?php echo $error; ?></p>
@@ -125,7 +119,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['valider'])) {
 				unset($error);
 			} ?>
 			<div>
-
 			</div>
 			<form method="post">
 				<div class="row uniform">
@@ -165,7 +158,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['valider'])) {
 					<div class="12u$ 12u$(xsmall)">
 						<input type="text" name="category" class="inputContact" id="category" value="<?php if (isset($category)) {
 																											echo $category;
-																										} ?>" placeholder="Objet">
+																										} ?>" placeholder="Sujet">
 					</div>
 					
 					<div class="12u$">
@@ -175,61 +168,17 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST['valider'])) {
 					</div>
 					
 					<div class="12u$">
-						<ul class="actions">
-							<li><input type="submit" value="Envoyez votre message" style="background: linear-gradient(to right, #FFD400, #FFD400); color: #000; font-weight: 700; font-family: 'Source Sans Pro', sans-serif !important" class="special" name="valider"></li>
+						<ul id="ContainerSubmit">
+							<input type="submit" id="BoutonEnvoyer" value="Envoyer" name="valider">
 						</ul>
-					</div>
-
-					<div class="divPcontact">
-						<p style="text-align: left;" class="pContact">
-							Contact Agence AREP :<br>
-							Paul CORPRON<br>
-							courtage@voyages-abeille-assurances.fr<br>
-							01 85 74 00 41<br>
-						</p>
-						<br>
-						<p style="text-align: right;" class="pContact">
-							Contact Abeille&nbsp;Assurances :<br>
-							Laure BRUET<br>
-							abeille_invitation_serv@abeille-assurances.fr<br>
-							06 10 10 95 16<br>
-						</p>
 					</div>
 				</div>
 			</form>
-
-
-		</div>
+																																	
+		</div>																																	
 	</section>
 
-	<?php include 'footer.php'; ?>
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/flipclock.min.js"></script>
-	<script type="text/javascript">
-		var clock;
-
-		$(document).ready(function() {
-
-			var currentDate = new Date();
-
-			var futureDate = new Date(2023, 04, 15);
-
-			var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-			if (diff == 0 | diff < 0) {
-				diff = 0;
-			}
-
-			clock = $('.clock').FlipClock(diff, {
-				clockFace: 'DailyCounter',
-				countdown: true
-			});
-		});
-	</script>
+	<div style="font-size: 16px;"><?php include 'footer.php'; ?></div>
 
 
 </body>

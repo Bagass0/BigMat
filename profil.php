@@ -113,32 +113,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $agence = $fct->cleanXSS($_POST['agence']);
     $mail = $fct->cleanXSS($_POST['mail']);
     $tel = $fct->cleanXSS($_POST['tel']);
-    $dateNaiss = $fct->cleanXSS($_POST['dateNaiss']);
-    $lieuNaiss = $fct->cleanXSS($_POST['lieuNaiss']);
-    $nationalite = $fct->cleanXSS($_POST['nationalite']);
-    $numPassport = $fct->cleanXSS($_POST['numPassport']);
-    $dateEmission = $fct->cleanXSS($_POST['dateEmission']);
-    $lieuEmission = $fct->cleanXSS($_POST['lieuEmission']);
-    $dateExpiration = $fct->cleanXSS($_POST['dateExpiration']);
-    $typeChambre = $fct->cleanXSS($_POST['typeChambre']);
+
+    $remarquesRegime = $fct->cleanXSS($_POST['remarquesRegime']);
     $remarques = $fct->cleanXSS($_POST['remarques']);
-    $remarquesAli = $fct->cleanXSS($_POST['remarquesAli']);
-    $civiliteAcc = $fct->cleanXSS($_POST['civiliteAcc']);
-    $nomAcc = $fct->cleanXSS($_POST['nomAcc']);
-    $prenomAcc = $fct->cleanXSS($_POST['prenomAcc']);
-    $mailAcc = $fct->cleanXSS($_POST['mailAcc']);
-    $telAcc = $fct->cleanXSS($_POST['telAcc']);
-    $dateNaissAcc = $fct->cleanXSS($_POST['dateNaissAcc']);
-    $lieuNaissAcc = $fct->cleanXSS($_POST['lieuNaissAcc']);
-    $nationaliteAcc = $fct->cleanXSS($_POST['nationaliteAcc']);
-    $numPassportAcc = $fct->cleanXSS($_POST['numPassportAcc']);
-    $dateEmissionAcc = $fct->cleanXSS($_POST['dateEmissionAcc']);
-    $lieuEmissionAcc = $fct->cleanXSS($_POST['lieuEmissionAcc']);
-    $dateExpirationAcc = $fct->cleanXSS($_POST['dateExpirationAcc']);
-    $remarquesAcc = $fct->cleanXSS($_POST['remarquesAcc']);
-    $remarquesAliAcc = $fct->cleanXSS($_POST['remarquesAliAcc']);
-    $conditions = $fct->cleanXSS($_POST['conditions']);
-    $conditionsAcc = $fct->cleanXSS($_POST['conditionsAcc']);
+    $participeEve = $fct->cleanXSS($_POST['participeEve']);
+    $participeDej = $fct->cleanXSS($_POST['participeDej']);
+    $confirmeReservation = $fct->cleanXSS($_POST['confirmeReservation']);
+    $régimeAlimentaire = $fct->cleanXSS($_POST['régimeAlimentaire']);
+    $rgpd = $fct->cleanXSS($_POST['rgpd']);
+   
+    
+
+
 
 
 
@@ -172,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($validation == "1") {
 
-                if (($civilite == "") or ($nom == "") or ($prenom == "") or ($agence == "") or ($tel == "") or ($dateNaiss == "") or ($lieuNaiss == "") or ($nationalite == "") or ($numPassport == "") or ($dateEmission == "") or ($lieuEmission == "") or ($dateExpiration == "")) {
+                if (($civilite == "") or ($nom == "") or ($prenom == "") or ($agence == "") or ($tel == "") or($remarquesRegime=="") or ($remarques =="") or ($participeEve== "") or ($participeDej=="") or ($confirmeReservation=="") or ( $régimeAlimentaire=="") or ($rgpd=="" )) {
 
                     $iserror = 1;
 
@@ -191,106 +177,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if ($tel == "") {
                         echo '<style>input[name="tel"] {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($dateNaiss == "") {
-                        echo '<style>input[name="dateNaiss"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuNaiss == "") {
-                        echo '<style>input[name="lieuNaiss"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($nationalite == "") {
-                        echo '<style>input[name="nationalite"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($numPassport == "") {
-                        echo '<style>input[name="numPassport"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateEmission == "") {
-                        echo '<style>input[name="dateEmission"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuEmission == "") {
-                        echo '<style>input[name="lieuEmission"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateExpiration == "") {
-                        echo '<style>input[name="dateExpiration"] {border-color: #FF0000 !important;}</style>';
-                    }
-                }
-
-                if (($data['SINGLE'] == "Non") and (($typeChambre == "") or ($civiliteAcc == "") or ($nomAcc == "") or ($prenomAcc == "") or ($mailAcc == "") or ($telAcc == "") or ($dateNaissAcc == "") or ($lieuNaissAcc == "") or ($nationaliteAcc == "") or ($numPassportAcc == "") or ($dateEmissionAcc == "") or ($lieuEmissionAcc == "") or ($dateExpirationAcc == ""))) {
-
-                    $iserror = 1;
                     
-                    if ($typeChambre == "") {
-                        echo '<style>input[name="typeChambre"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    if ($remarquesRegime == "") {
+                        echo '<style>input[name="remarquesRegime"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($civiliteAcc == "") {
-                        echo '<style>input[name="civiliteAcc"] + label:before  {border-color: #FF0000 !important;}</style>';
+                    if ($remarques== "") {
+                        echo '<style>input[name="remarques"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($nomAcc == "") {
-                        echo '<style>input[name="nomAcc"] {border-color: #FF0000 !important;}</style>';
+                    
+                    if ($participeEve== "") {
+                        echo '<style>input[name="participeEve"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($prenomAcc == "") {
-                        echo '<style>input[name="prenomAcc"] {border-color: #FF0000 !important;}</style>';
+                    if ($participeDej== "") {
+                        echo '<style>input[name="participeDej"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($mailAcc == "") {
-                        echo '<style>input[name="mailAcc"] {border-color: #FF0000 !important;}</style>';
+                    if ($confirmeReservation == "") {
+                        echo '<style>input[name="confirmeReservation"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($telAcc == "") {
-                        echo '<style>input[name="telAcc"] {border-color: #FF0000 !important;}</style>';
+                    if ($régimeAlimentaire == "") {
+                        echo '<style>input[name="régimeAlimentaire"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($dateNaissAcc == "") {
-                        echo '<style>input[name="dateNaissAcc"] {border-color: #FF0000 !important;}</style>';
+                    if ($rgpd == "") {
+                        echo '<style>input[name="rgpd"] + label:before  {border-color: #FF0000 !important;}</style>';
                     }
-                    if ($lieuNaissAcc == "") {
-                        echo '<style>input[name="lieuNaissAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($nationaliteAcc == "") {
-                        echo '<style>input[name="nationaliteAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($numPassportAcc == "") {
-                        echo '<style>input[name="numPassportAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateEmissionAcc == "") {
-                        echo '<style>input[name="dateEmissionAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($lieuEmissionAcc == "") {
-                        echo '<style>input[name="lieuEmissionAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
-                    if ($dateExpirationAcc == "") {
-                        echo '<style>input[name="dateExpirationAcc"] {border-color: #FF0000 !important;}</style>';
-                    }
+                  
                 }
 
-                if (($data['UPLOAD_PHOTO'] == "" || $data['UPLOAD_PHOTO'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger votre photo !");
-                    echo '<style>label[name="divFil-trombi"] {text-decoration: underline 2px red; !important;}</style>';
-                }
+                
 
-                if (($data['UPLOAD_PASSPORT'] == "" || $data['UPLOAD_PASSPORT'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger votre passport ou CNI !");
-                    echo '<style>label[name="divFil-identite"] {text-decoration: underline 2px red; !important;}</style>';
-                }
-
-                if (($data['SINGLE'] == "Non") and ($data['UPLOAD_PHOTO_ACC'] == "" || $data['UPLOAD_PHOTO_ACC'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger la photo de votre accompagnant !");
-                    echo '<style>label[name="divFil-trombi-acc"] {text-decoration: underline 2px red;!important;}</style>';
-                }
-
-                if (($data['SINGLE'] == "Non") and ($data['UPLOAD_PASSPORT_ACC'] == "" || $data['UPLOAD_PASSPORT_ACC'] === NULL)) {
-                    $iserror = 1;
-                    $color = "#FF6767";
-                    array_push($errors, "Vous devez télécharger le passport ou CNI de votre accompagnant !");
-                    echo '<style>label[name="divFil-identite-acc"] {text-decoration: underline 2px red;!important;}</style>';
-                }
-
-                if ($iserror == 1) {
-                    $color = "#FF0000";
-                    array_push($errors, "Tous les champs obligatoires n'ont pas été remplis !<br>Pour valider l'inscription vous devez tous les compléter.");
-                }
+               
             }
 
             $checkMail = $usr->selectMailDoublon($id, $mail);
@@ -311,7 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $typeChambre = "Single";
                 }
 
-                $usr->updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre, $remarques, $remarquesAli, $civiliteAcc, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $accompagnement, $conditions, $conditionsAcc);
+                $usr->updateUserById3($id, $validation, $civilite, $nom, $prenom, $agence, $mail, $tel, $dateNaiss, $lieuNaiss, $nationalite, $numPassport, $dateEmission, $lieuEmission, $dateExpiration, $typeChambre,$remarques, $remarquesAli, $civiliteAcc,$remarquesRegime, $nomAcc, $prenomAcc, $mailAcc, $telAcc, $dateNaissAcc, $lieuNaissAcc, $nationaliteAcc, $numPassportAcc, $dateEmissionAcc, $lieuEmissionAcc, $dateExpirationAcc, $remarquesAcc, $remarquesAliAcc, $conditions, $conditionsAcc, $participeEve,$participeDej,$confirmeReservation,$régimeAlimentaire, $rgpd);
 
                 if ($validation == "1") {
                     include('checkMail.php');
@@ -342,6 +257,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data['REMARQUES'] = $remarques;
             $data['REMARQUES_ALI'] = $remarquesAli;
             $data['CIVILITE_ACC'] = $civiliteAcc;
+            $data['REMARQUESREGIME'] = $remarquesRegime;
             $data['NOM_ACC'] = $nomAcc;
             $data['PRENOM_ACC'] = $prenomAcc;
             $data['MAIL_ACC'] = $mailAcc;
@@ -357,8 +273,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data['REMARQUES_ALI_ACC'] = $remarquesAliAcc;
             $data['CONDITIONS'] = $conditions;
             $data['CONDITIONS_ACC'] = $conditionsAcc;
+            $data['PARTICIPEEVE'] = $participeEve;
+            $data['PARTICIPEDEJ'] = $participeDej;
+            $data['CONFIRMERESERVATION'] = $confirmeReservation;
+            $data['REGIMEALIMENTAIRE'] = $régimeAlimentaire;
+            $data['RGPD'] = $rgpd;
+           
         }
     }
+
 }
 ?>
 
@@ -385,11 +308,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php include 'header.php' ?>
 
-    <section id="two" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 5em; margin-bottom: -7em;">
-        <h3 style="font-weight: 700; margin-left: 1.5em; font-size: 2em;"> Formulaire d'inscription </h3>
-    </section>
-
-    <section id="one" class="wrapper align-left" style="border-radius: 1em; padding-top: 5em; margin-top: 0 !important">
+    <section id="one" class="wrapper align-left" style="border-radius: 1em;  display: flex;  flex: 1; max-width: 80%;
+    min-width: 55%; padding-top: 5em; margin-top: 0 !important">
 
         <div class="inner">
 
@@ -432,10 +352,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                             echo "?idColaborateur=" . $_GET["idColaborateur"];
                                                         }
                                                     } ?>">
-                <div class="row uniform">
+                <div class="row uniform"  >
+                    <div class="12u$ 12u$(xsmall) inscription" style="display: flex; justify-content:center; align-items:center; margin-bottom: 3em;">
+                        <h1  style="font-size: 30pt; color: grey;  font-weight: 500; width: 11em; text-align:center; margin-top: 1px;">Inscription</h1>
+                    </div>
 
                     <div class="12u$ 12u$(xsmall)" style="display: flex; margin-bottom: 3em;">
-                        <img src="images/profil.jpg" style="width: 2em; height: 2.3em; margin-right: 2em;" class="">
                         <h3 style="font-size: 20pt; font-weight: 700; width: 11em; text-align:left; margin-right: 1em; align-self: center; margin: 0;">Identité</h3>
                     </div>
 
@@ -454,314 +376,221 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                     <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="nom" style="width: 4em;" class="labelProfil">Nom* :</label>
-                        <input style="width: calc(100% - 4em);" <?php echo ($readonly) ?> type="text" name="nom" class="inputProfil" id="nom" value="<?= $data['NOM'] ?>">
+                        <label for="nom" style="width: 4em;" class="labelProfil"></label>
+                        <input placeholder="Nom*"  style="width: calc(100% - 4em);" <?php echo ($readonly) ?> type="text" name="nom" class="inputProfil" id="nom" value="<?= $data['NOM'] ?>">
                     </div>
 
                     <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="prenom" style="width: 6em;" class="labelProfil">Prénom* :</label>
-                        <input style="width: calc(100% - 6em);" <?php echo ($readonly) ?> type="text" name="prenom" class="inputProfil" id="prenom" value="<?= $data['PRENOM'] ?>">
+                        <label for="prenom" style="width: 6em;" class="labelProfil"></label>
+                        <input placeholder="Prénom* " style="width: calc(100% - 0em);" <?php echo ($readonly) ?> type="text" name="prenom" class="inputProfil" id="prenom" value="<?= $data['PRENOM'] ?>">
                     </div>
 
+                    <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
+                        <label for="mail" style="width: 4em;" class="labelProfil"></label>
+                        <input placeholder="Email*" style="width: calc(100% - 4em);" <?php echo ($readonly) ?> type="email" name="mail" class="inputProfil" id="mail" value="<?= $data['EMAIL'] ?>">
+                    </div>
+
+                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
+                        <label for="tel" style="width: 12em;" class="labelProfil"> </label>
+                        <input placeholder="Numéro de Portable* " style="width: calc(100% - 0em);" <?php echo ($readonly) ?> type="tel" name="tel" class="inputProfil" id="tel" value="<?= $data['TEL'] ?>">
+                    </div>
                     <div class="6u$ 12u$(xsmall) divProfil" style="width: 100%;">
-                        <label for="agence" style="width: 13em;" class="labelProfil">Votre Cabinet de Courtage* :</label>
-                        <input style="width: calc(100% - 13em);" <?php echo ($readonly) ?> type="text" name="agence" class="inputProfil" id="agence" value="<?= $data['AGENCE'] ?>">
+                        <label for="agence" style="width: 13em;" class="labelProfil"></label>
+                        <input   placeholder="Entreprise*" style="width: calc(100% - 0em);" <?php echo ($readonly) ?> type="text" name="agence" class="inputProfil" id="agence" value="<?= $data['AGENCE'] ?>">
                     </div>
 
-                    <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="mail" style="width: 4em;" class="labelProfil">Email* :</label>
-                        <input style="width: calc(100% - 4em);" <?php echo ($readonly) ?> type="email" name="mail" class="inputProfil" id="mail" value="<?= $data['EMAIL'] ?>">
-                    </div>
 
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="tel" style="width: 12em;" class="labelProfil">Numéro de Portable* : +33</label>
-                        <input style="width: calc(100% - 12em);" <?php echo ($readonly) ?> type="tel" name="tel" class="inputProfil" id="tel" value="<?= $data['TEL'] ?>">
-                    </div>
+                     <!-- il y a un bug sur les radios -->   
+                    <!--first radio  continuer à faire des modifications -->                                                                                               
+                    <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em); ">   
+                        <div for="conditions" class="conditions labelProfil" style="width: auto;">
+                            <h5 style="align-self: end; width: auto; width: calc(100% - 6em);margin: 0; color:grey; font-weight: 500 !important; font-size:16px; font-family: 'Source Sans Pro',sans-serif !important;">Je participe à l'évenement AG et séminaire des dirigeants de Septembre 2022.</h5><br>
+                        </div>
+                      
+                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block; ">
+                            <input <?php echo ($disable) ?> type="radio" name="participeEve" id="oui" value="Oui" <?php if ($data['PARTICIPEEVE'] == "Oui") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?>>
+                            <label class="labelProfil" for="oui">Oui*</label>
+                        </div>
+                        <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="participeEve" id="non" value="Non" <?php if ($data['PARTICIPEEVE'] == "Non") {
+                                                                                                                            echo 'checked';
+                                                                                                                        } ?>>
+                            <label class="labelProfil" for="non">Non*</label>
+                        </div>
+                    </div> <br>
+                    <!--second radio  continuer à faire des modifications-->  
 
-                    <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="dateNaiss" style="width: 9em;" class="labelProfil">Date de naissance* :</label>
-                        <input style="width: calc(100% - 9em);" <?php echo ($readonly) ?> type="date" name="dateNaiss" class="inputProfil" id="dateNaiss" value="<?= $data['DATE_NAISS'] ?>" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][^1-8][0-9][0-9]">
-                    </div>
+                    <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em);">   
+                        <div for="conditions" class="conditions labelProfil" style="width: auto;">
+                            <h5 style="align-self: end; width: auto; width: calc(100% - 6em);margin: 0; color:grey;  font-weight: 500 !important; font-size:16px; font-family: 'Source Sans Pro',sans-serif !important;">Je participe au déjeuner di jeudi 22 Septembre 2022.</h5><br>
+                        </div>
 
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="lieuNaiss" style="width: 9em;" class="labelProfil">Lieu de naissance* :</label>
-                        <input style="width: calc(100% - 9em);" <?php echo ($readonly) ?> type="text" name="lieuNaiss" class="inputProfil" id="lieuNaiss" value="<?= $data['LIEU_NAISS'] ?>">
-                    </div>
+                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="participeDej" id="Oui" value="Oui" <?php if ($data['PARTICIEDEJ'] == "Oui") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?>>
+                            <label class="labelProfil" for="Oui">Oui*</label>
+                        </div>
+                        <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="participeDej" id="Non" value="Non" <?php if ($data['PARTICIPEDEJ'] == "Non") {
+                                                                                                                            echo 'checked';
+                                                                                                                        } ?>>
+                            <label class="labelProfil" for="Non">Non*</label>
+                        </div>
+                    </div> <br>
 
-                    <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="nationalite" style="width: 6em;" class="labelProfil">Nationalité* :</label>
-                        <input style="width: calc(100% - 6em);" <?php echo ($readonly) ?> type="text" name="nationalite" class="inputProfil" id="nationalite" value="<?= $data['NATIONALITE'] ?>">
-                    </div>
+                 <!--third radio  continuer à faire des modifications-->  
 
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                        <label for="numPassport" style="width: 11em;" class="labelProfil">N° de passeport* :</label>
-                        <input style="width: calc(100% - 11em);" <?php echo ($readonly) ?> type="text" name="numPassport" class="inputProfil" id="numPassport" value="<?= $data['NUM_PASSPORT'] ?>">
-                    </div>
+                 <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em);">   
+                        <div for="conditions" class="conditions labelProfil" style="width: auto;">
+                            <h5 style="align-self: end; width: auto; width: calc(100% - 6em);margin: 0; color:grey;  font-weight: 500 !important; font-size:16px; font-family: 'Source Sans Pro',sans-serif !important;">Je confirme ma réservation de chambre pour les nuits du Jeudi 22 et du Vendredi 23 Septembre 2022. </h5><br>
+                        </div>
 
-                    <div class="6u 12u$(xsmall) divProfil" style="width: 33%">
-                        <label for="dateEmission" style="width: 8em;" class="labelProfil">Date d'émission* :</label>
-                        <input style="width: calc(100% - 8em);" <?php echo ($readonly) ?> type="date" name="dateEmission" class="inputProfil" id="dateEmission" value="<?= $data['DATE_EMISSION'] ?>">
-                    </div>
+                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="confirmeReservation" id="oUi" value="Oui" <?php if ($data['CONFIRMERESERVATION'] == "Oui") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?>>
+                            <label class="labelProfil" for="oUi">Oui*</label>
+                        </div>
+                        <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="confirmeReservation" id="nOn" value="Non" <?php if ($data['CONFIRMERESERVATION'] == "Non") {
+                                                                                                                            echo 'checked';
+                                                                                                                        } ?>>
+                            <label class="labelProfil" for="nOn">Non*</label>
+                        </div>
+                    </div> <br>
 
-                    <div class="6u 12u$(xsmall) divProfil" style="width: 34%">
-                        <label for="lieuEmission" style="width: 8em;" class="labelProfil">Lieu d'émission* :</label>
-                        <input style="width: calc(100% - 8em);" <?php echo ($readonly) ?> type="text" name="lieuEmission" class="inputProfil" id="lieuEmission" value="<?= $data['LIEU_EMISSION'] ?>">
-                    </div>
 
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 33%">
-                        <label for="dateExpiration" style="width: 9em;" class="labelProfil">Date d'expiration* :</label>
-                        <input style="width: calc(100% - 9em);" <?php echo ($readonly) ?> type="date" name="dateExpiration" class="inputProfil" id="dateExpiration" value="<?= $data['DATE_EXPIRATION'] ?>">
-                    </div>
+                     <!--fourth radio  continuer à faire des modifications-->  
 
-                    <div class="12u$ 12u$(xsmall) divProfil" style="display: block; margin-top: 1em; margin-bottom: 0em;" id="div1">
-                        <label for="remarquesAli" style="width: 100%;" class="labelProfil">Particularités alimentaires (allergies, intolérances, régimes spécifiques) :</label>
-                        <textarea <?php echo ($readonly) ?> class="inputProfil" id="remarquesAli" name="remarquesAli" style="height: 5em !important; resize: none; border: solid 1px #000 !important;" oninput="conditionsCheck()"><?= $data['REMARQUES_ALI'] ?></textarea>
-                    </div>
+                 <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em);">   
+                        <div for="conditions" class="conditions labelProfil" style="width: auto;">
+                            <h5 style="align-self: end; width: auto; width: calc(100% - 6em);margin: 0; color:grey; font-weight: 500 !important; font-size:16px; font-family: 'Source Sans Pro',sans-serif !important;">Si vous avez un régime alimentaire particulier merci de le préciser. </h5><br>
+                        </div>
 
-                    <div class="12u$ displayConditions" style="text-align: left; margin-top: 0em; padding-top: 1em;">
-                        <input <?php echo ($checkbox) ?> id="conditions" name="conditions" class="conditions" type="checkbox" value="1" <?php if ($data['CONDITIONS'] == "1") {
-                                                                                                                                            echo "checked";
-                                                                                                                                        } ?>>
-                        <label for="conditions" class="conditions labelProfil" style="font-weight: 500 !important;">
-                            J’accepte que mes données relatives aux particularités alimentaires, susceptibles de constituer des données de santé ou des données révélant mes convictions religieuses, soient traitées par Abeille Vie afin de préparer des repas adaptés dans le cadre du voyage courtage national 2023. A défaut de consentement, vos particularités alimentaires ne seront pas prises en compte.
-                        </label>
 
-                    </div>
+                         <!--continuer le responsive-->
 
-                    <br><br>
+                         <div class="container" style="display: flex; ">
+                            <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; ">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="pas-de-regime-particulier" value="Pas-de-regime-particulier" <?php if ($data['REGIMEALIMENTAIRE'] == "pas-de-regime-particulier") {
+                                                                                                                            echo 'checked';
+                                                                                                                        } ?>>
+                                <label class="labelProfil" for="pas-de-regime-particulier">Pas de régime particulier</label>
+                            </div>
+                        </div>
+                      
+                        <div class="container" style="display: flex; ">
+                            <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 130px; ">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="végétarien" value="Végétarien" <?php if ($data['REGIMEALIMENTAIRE'] == "Végétarien") {
+                                                                                                                                echo 'checked';
+                                                                                                                            } ?>>
+                                <label class="labelProfil" for="végétarien">Végétarien</label>
+                            </div>
+                            <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 130px; ">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-gluten" value="Sans-gluten" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-gluten") {
+                                                                                                                                echo 'checked';
+                                                                                                                            } ?>>
+                                <label class="labelProfil" for="sans-gluten">Sans gluten</label>
+                            </div>
+                            <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em;">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="autre" value="Autre" <?php if ($data['REGIMEALIMENTAIRE'] == "Autre") {
+                                                                                                                                echo 'checked';
+                                                                                                                            } ?>>
+                                <label class="labelProfil" for="autre">Autre</label>
+                            </div>
+                        </div>
+                        <div class="container"  style="display: flex;">
+                            <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; padding-right: 135px;">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-porc" value="Sans-porc" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-porc") {
+                                                                                                                                echo 'checked';
+                                                                                                                            } ?>>
+                                <label class="labelProfil" for="sans-porc">Sans porc</label>
+                            </div>
+                            
+                            <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em;">
+                                <input <?php echo ($disable) ?> type="radio" name="régimeAlimentaire" id="sans-crustacé" value="Sans-crustacé" <?php if ($data['REGIMEALIMENTAIRE'] == "Sans-crustacé") {
+                                                                                                                                echo 'checked';
+                                                                                                                            } ?>>
+                                <label class="labelProfil" for="sans-crustacé">Sans crustacé</label>
+                            </div>
+                        </div>
+                        
+                      
+                    </div> <br>
+
+                   
+                    
 
                     <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
-                        <label for="remarques" style="width: 100%;" class="labelProfil">Autres remarques :</label>
-                        <textarea <?php echo ($readonly) ?> class="inputProfil" id="remarques" name="remarques" style="height: 5em !important; resize: none; border: solid 1px #000 !important;"><?= $data['REMARQUES'] ?></textarea>
+                        <label for="remarquesRegime" style="width: 100%;" class="labelProfil"></label>
+                        <textarea <?php echo ($readonly) ?> placeholder="remarquesRegime" class="inputProfil" id="remarquesRegime" name="remarquesRegime" style="height: 9px;  line-height: 6px; !important; resize: none; "><?= $data['REMARQUESREGIME'] ?></textarea>
                     </div>
-
-                    <div class="3u$ 12u$(xsmall) sourceSansPro" style="width: auto;">
-                        Pièces jointes à télécharger : <em class="em14" style="font-size: 11pt;">(Formats : pdf, jpeg, jpg, png/ 6Mo maximum)</em>
-                    </div>
-
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 100%; gap: 1em; margin-bottom: 0;">
-                        <label for="trombi" style="width: 29em; align-self: baseline !important;" name="divFil-trombi" class="labelProfil">Une photo qui vous ressemble (autre que photo ID) – trombinoscope*</label>
-                        <a style="text-decoration: none; font-weight: 600; cursor: pointer;" <?php echo ($trombi) ?> value="Photo" id="trombi">
-                            <img src="images/ici.jpg" style="height: 1.5em;">
-                        </a>
-                        <input <?php echo ($readonly) ?> type='file' id="uploadTrombi" name="uploadP" accept=".jpeg,.jpg,.png,.pdf,.JPEG,.JPG,.PNG,.PDF" style="width: 70%; float:left; display:none">
-                        <p class="file-name-trombi labelProfil" style="align-self: baseline !important; <?php if ($photoProfil != "") {
-                                                                                                            echo ('margin: 0px;');
-                                                                                                        } ?>">
-                            <?= $photoProfil != "" ? $photoProfil . " - " . $formattedSizeTrombi : "" ?>
-                        </p>
-                    </div>
-
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 100%; gap: 1em;">
-                        <label <?php echo ($disable) ?> for="uploadPassport" style="width: 8em; align-self: baseline !important;" name="divFil-identite" class="labelProfil">Votre passeport*</label>
-                        <a style="text-decoration: none; font-weight: 600; cursor: pointer;" <?php echo ($passport) ?> value="Passeport" id="uploadPassport">
-                            <img src="images/ici.jpg" style="height: 1.5em;">
-                        </a>
-                        <input <?php echo ($readonly) ?> type='file' id="sortpicture" name="sortpic" accept=".jpeg,.jpg,.png,.pdf,.JPEG,.JPG,.PNG,.PDF" style="width: 70%; float:left; display:none">
-                        <p class="file-name-identite labelProfil" style="align-self: baseline !important; <?php if ($carteIdentite != "") {
-                                                                                                                echo ('margin: 0px;');
-                                                                                                            } ?>">
-                            <?= $carteIdentite != "" ? $carteIdentite . " - " . $formattedSizeCni : "" ?>
-                        </p>
-                    </div>
-
-                    <div class="12u$ 12u$(xsmall) displayPartenaire" style="display: flex; margin-bottom: 1em;">
-                        <img src="images/profil.jpg" style="width: 2em; height: 2.3em; margin-right: 2em;" class="">
-                        <h3 style="font-size: 20pt; font-weight: 700; width: 11em; text-align:left; margin-right: 1em; align-self: center; margin: 0;">Accompagnant</h3>
-                    </div>
-
-                    <div class="3u 12u$(xsmall) sourceSansPro displayPartenaire" style="width: auto;">
-                        Type de Chambre* :
-                    </div>
-                    <div class="3u 12u$(xsmall) displayPartenaire" style="width: auto;">
-                        <input <?php echo ($disable) ?> type="radio" name="typeChambre" id="double" value="Double" <?php if ($data['TYPE_CHAMBRE'] == "Double") {
-                                                                                                                        echo 'checked';
-                                                                                                                    } ?>>
-                        <label class="labelProfil" for="double">Double</label>
-                    </div>
-                    <div class="3u 12u$(xsmall) displayPartenaire" style="width: auto">
-                        <input <?php echo ($disable) ?> type="radio" name="typeChambre" id="twin" value="Twin" <?php if ($data['TYPE_CHAMBRE'] == "Twin") {
-                                                                                                                    echo 'checked';
-                                                                                                                } ?>>
-                        <label class="labelProfil" for="twin">Twin ( 2 lits séparés )</label>
-                    </div>
-
-                    <div class="6u$ 12u$(xsmall) divProfil" style="width: 100%; display: none;">
-                        <input style="width: 100%;" disabled type="radio" name="ifSingle" class="inputProfil" id="ifSingle" value="Oui" <?php if ($data['SINGLE'] == "Oui") {
-                                                                                                                                            echo 'checked';
-                                                                                                                                        } ?>>
-                    </div>
-
-                    <div style="height: 3em; width: 100%" class="ifSingle"></div>
-
-                    <div class="row uniform displayPartenaire" style="width: 100%">
-                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em;">
-                            <input <?php echo ($disable) ?> type="radio" name="civiliteAcc" id="mrAcc" value="Mr" <?php if ($data['CIVILITE_ACC'] == "Mr") {
-                                                                                                                        echo 'checked';
-                                                                                                                    } ?>>
-                            <label class="labelProfil" for="mrAcc">Mr*</label>
-                        </div>
-                        <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em;">
-                            <input <?php echo ($disable) ?> type="radio" name="civiliteAcc" id="mmeAcc" value="Mme" <?php if ($data['CIVILITE_ACC'] == "Mme") {
-                                                                                                                        echo 'checked';
-                                                                                                                    } ?>>
-                            <label class="labelProfil" for="mmeAcc">Mme*</label>
-                        </div>
-
-
-                        <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="nomAcc" style="width: 4em;" class="labelProfil">Nom* :</label>
-                            <input style="width: calc(100% - 4em);" <?php echo ($readonly) ?> type="text" name="nomAcc" class="inputProfil" id="nomAcc" value="<?= $data['NOM_ACC'] ?>">
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="prenomAcc" style="width: 6em;" class="labelProfil">Prénom* :</label>
-                            <input style="width: calc(100% - 6em);" <?php echo ($readonly) ?> type="text" name="prenomAcc" class="inputProfil" id="prenomAcc" value="<?= $data['PRENOM_ACC'] ?>">
-                        </div>
-
-                        <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="mailAcc" style="width: 4em;" class="labelProfil">Email* :</label>
-                            <input style="width: calc(100% - 4em);" <?php echo ($readonly) ?> type="email" name="mailAcc" class="inputProfil" id="mailAcc" value="<?= $data['MAIL_ACC'] ?>">
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="telAcc" style="width: 12em;" class="labelProfil">Numéro de Portable* : +33</label>
-                            <input style="width: calc(100% - 12em);" <?php echo ($readonly) ?> type="tel" name="telAcc" class="inputProfil" id="telAcc" value="<?= $data['TEL_ACC'] ?>">
-                        </div>
-
-                        <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="dateNaissAcc" style="width: 9em;" class="labelProfil">Date de naissance* :</label>
-                            <input style="width: calc(100% - 9em);" <?php echo ($readonly) ?> type="date" name="dateNaissAcc" class="inputProfil" id="dateNaissAcc" value="<?= $data['DATE_NAISS_ACC'] ?>" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][^1-8][0-9][0-9]">
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="lieuNaissAcc" style="width: 9em;" class="labelProfil">Lieu de naissance* :</label>
-                            <input style="width: calc(100% - 9em);" <?php echo ($readonly) ?> type="text" name="lieuNaissAcc" class="inputProfil" id="lieuNaissAcc" value="<?= $data['LIEU_NAISS_ACC'] ?>">
-                        </div>
-
-                        <div class="6u 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="nationaliteAcc" style="width: 6em;" class="labelProfil">Nationalité* :</label>
-                            <input style="width: calc(100% - 6em);" <?php echo ($readonly) ?> type="text" name="nationaliteAcc" class="inputProfil" id="nationaliteAcc" value="<?= $data['NATIONALITE_ACC'] ?>">
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 50%">
-                            <label for="numPassportAcc" style="width: 11em;" class="labelProfil">N° de passeport* :</label>
-                            <input style="width: calc(100% - 11em);" <?php echo ($readonly) ?> type="text" name="numPassportAcc" class="inputProfil" id="numPassportAcc" value="<?= $data['NUM_PASSPORT_ACC'] ?>">
-                        </div>
-
-                        <div class="6u 12u$(xsmall) divProfil" style="width: 33%">
-                            <label for="dateEmissionAcc" style="width: 8em;" class="labelProfil">Date d'émission* :</label>
-                            <input style="width: calc(100% - 8em);" <?php echo ($readonly) ?> type="date" name="dateEmissionAcc" class="inputProfil" id="dateEmissionAcc" value="<?= $data['DATE_EMISSION_ACC'] ?>">
-                        </div>
-
-                        <div class="6u 12u$(xsmall) divProfil" style="width: 34%">
-                            <label for="lieuEmissionAcc" style="width: 8em;" class="labelProfil">Lieu d'émission* :</label>
-                            <input style="width: calc(100% - 8em);" <?php echo ($readonly) ?> type="text" name="lieuEmissionAcc" class="inputProfil" id="lieuEmissionAcc" value="<?= $data['LIEU_EMISSION_ACC'] ?>">
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 33%">
-                            <label for="dateExpirationAcc" style="width: 9em;" class="labelProfil">Date d'expiration* :</label>
-                            <input style="width: calc(100% - 9em);" <?php echo ($readonly) ?> type="date" name="dateExpirationAcc" class="inputProfil" id="dateExpirationAcc" value="<?= $data['DATE_EXPIRATION_ACC'] ?>">
-                        </div>
-
-                        <div style="height: 3em; width: 100%"></div>
-
-                        <div class="12u$ 12u$(xsmall) divProfil" style="display: block; margin-top: 1em; margin-bottom: 0em;">
-                            <label for="remarquesAliAcc" style="width: 100%;" class="labelProfil">Particularités alimentaires (allergies, intolérances, régimes spécifiques) :</label>
-                            <textarea <?php echo ($readonly) ?> class="inputProfil" id="remarquesAliAcc" name="remarquesAliAcc" style="height: 5em !important; resize: none; border: solid 1px #000 !important;" oninput="conditionsAccCheck()"><?= $data['REMARQUES_ALI_ACC'] ?></textarea>
-
-                        </div>
-
-                        <div class="12u$ displayConditionsAcc" style="text-align: left; margin-top: 0em; padding-top: 1em;">
-                            <input <?php echo ($checkbox) ?> id="conditionsAcc" name="conditionsAcc" class="conditions" type="checkbox" value="1" <?php if ($data['CONDITIONS_ACC'] == "1") {
-                                                                                                                                                        echo "checked";
-                                                                                                                                                    } ?>>
-                            <label for="conditionsAcc" class="conditions labelProfil" style="font-weight: 500 !important;">
-                                J’accepte que mes données relatives aux particularités alimentaires, susceptibles de constituer des données de santé ou des données révélant mes convictions religieuses, soient traitées par Abeille Vie afin de préparer des repas adaptés dans le cadre du voyage courtage national 2023. A défaut de consentement, vos particularités alimentaires ne seront pas prises en compte.
-                            </label>
-
-                        </div>
-
-                        <br><br>
-
-                        <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
-                            <label for="remarquesAcc" style="width: 100%;" class="labelProfil">Autres remarques :</label>
-                            <textarea <?php echo ($readonly) ?> class="inputProfil" id="remarquesAcc" name="remarquesAcc" style="height: 5em !important; resize: none; border: solid 1px #000 !important;"><?= $data['REMARQUES_ACC'] ?></textarea>
-                        </div>
-
-                        <div class="3u$ 12u$(xsmall) sourceSansPro" style="width: auto;">
-                            Pièces jointes à télécharger : <em class="em14" style="font-size: 11pt;">(Formats : pdf, jpeg, jpg, png/ 6Mo maximum)</em>
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 100%; gap: 1em; margin-bottom: 0;">
-                            <label <?php echo ($disable) ?> for="trombiAcc" style="width: 29em; align-self: baseline !important;" name="divFil-trombi-acc" class="labelProfil">Une photo qui vous ressemble (autre que photo ID) – trombinoscope*</label>
-                            <a style="text-decoration: none; font-weight: 600; cursor: pointer;" <?php echo ($trombiAcc) ?> value="Photo" id="trombiAcc">
-                                <img src="images/ici.jpg" style="height: 1.5em;">
-                            </a>
-                            <input <?php echo ($readonly) ?> type='file' id="uploadTrombiAcc" name="uploadP" accept=".jpeg,.jpg,.png,.pdf,.JPEG,.JPG,.PNG,.PDF" style="width: 70%; float:left; display:none">
-                            <p class="file-name-trombi-acc labelProfil" style="align-self: baseline !important; <?php if ($photoProfilAcc != "") {
-                                                                                                                    echo ('margin: 0px;');
-                                                                                                                } ?>">
-                                <?= $photoProfilAcc != "" ? $photoProfilAcc . " - " . $formattedSizeTrombiAcc : "" ?>
-                            </p>
-                        </div>
-
-                        <div class="6u$ 12u$(xsmall) divProfil" style="width: 100%; gap: 1em;">
-                            <label <?php echo ($disable) ?> for="uploadPassportAcc" style="width: 8em; align-self: baseline !important;" name="divFil-identite-acc" class="labelProfil">Votre passeport*</label>
-                            <a style="text-decoration: none; font-weight: 600; cursor: pointer;" <?php echo ($passportAcc) ?> value="Passeport" id="uploadPassportAcc">
-                                <img src="images/ici.jpg" style="height: 1.5em;">
-                            </a>
-                            <input <?php echo ($readonly) ?> type='file' id="sortpictureAcc" name="sortpic" accept=".jpeg,.jpg,.png,.pdf,.JPEG,.JPG,.PNG,.PDF" style="width: 70%; float:left; display:none">
-                            <p class="file-name-identite-acc labelProfil" style="align-self: baseline !important; <?php if ($carteIdentiteAcc != "") {
-                                                                                                                        echo ('margin: 0px;');
-                                                                                                                    } ?>">
-                                <?= $carteIdentiteAcc != "" ? $carteIdentiteAcc . " - " . $formattedSizeCniAcc : "" ?>
-                            </p>
-                        </div>
+                    
+                    <div class="12u$ 12u$(xsmall) divProfil" style="display: block;">
+                        <label for="remarques" style="width: 100%; color:grey; " class="labelProfil">Avez-vous des remarques?</label>
+                        <textarea <?php echo ($readonly) ?> placeholder="Remarques"  class="inputProfil" id="remarques" name="remarques" style="height: 6em !important; line-height: 6px; resize: none; "><?= $data['REMARQUES'] ?></textarea>
                     </div>
 
                     <br>
 
-                    <em class="em14" style="font-size: 9pt; font-family: 'Arial', sans-serif;">
+                    <em class="em14" style="font-size: 9pt;color:grey; margin-bottom:-40px;  font-family: 'Arial', sans-serif;">
 
+                        <h3 style=" color:grey; font: weight 6px; font-size:13px; color:grey;" >Modalités d'inscription</h3><br>
                         Vos données personnelles sont traitées par Abeille Vie afin d'organiser le voyage courtage national 2023 sur la base de son intérêt légitime à gérer son réseau d’apporteurs. Les données relatives aux particularités alimentaires sont traitées sur la base de votre consentement.<br>
                         <br>
                         Vos données sont conservées pour la durée du voyage. Les destinataires de vos données sont les personnels d’Abeille Vie ou des entités d'Abeille&nbsp;Assurances auxquelles ils appartiennent, ses prestataires ou partenaires, y compris les agences organisatrices du voyage.<br>
                         <br>
                         Vous disposez des droits d'accès, de rectification, d'effacement, de portabilité des données, d'opposition et de limitation du traitement. Vous pouvez retirer votre consentement au traitement de vos données relatives aux particularités alimentaires à tout moment.<br>
                         Ces droits peuvent être exercés auprès du délégué à la protection des données, en précisant dans l’objet de la demande « Voyage courtage national 2023 »,à l’adresse : dpo.france@abeille-assurances.fr.<br>
-                        Vous disposez également du droit d'introduire une réclamation auprès de la CNIL.<br>
+                        Vous disposez également du droit d'introduire une réclamation auprès de la CNIL.<br> <br><br>
+
                     </em>
+
+
+                    <div class="2u 12u$(xsmall) divProfil" style="width: calc(100% - 6em); ">   
+                      
+                        <div class="2u 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block; ">
+                            <input <?php echo ($disable) ?> type="radio" name="rgpd" id="accepter" value="Accepter" <?php if ($data['RGPD'] == "Accepter") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?>>
+                            <label class="labelProfil" for="accepter">J'accepte*</label>
+                        </div>
+                        <div class="3u$ 12u$(xsmall) divProfil" style="width: auto; margin-left: 0.5em; display: inline-block;">
+                            <input <?php echo ($disable) ?> type="radio" name="rgpd" id="accepterpas" value="AccepterPas" <?php if ($data['RGPD'] == "AccepterPas") {
+                                                                                                                            echo 'checked';
+                                                                                                                        } ?>>
+                            <label class="labelProfil" for="accepterpas">Je n'accepte pas*</label>
+                        </div>
+                    </div> <br>
+
+
+                   <br>
+
+                </div><br>
+
+                <div class="12u$">
+                    <input type="hidden" name="form" value="profile">
+                    <input type="hidden" name="id_societe" value="<?= $societe_infos['ID'] ?>">
+                    <input type="hidden" name="id" value="<?= $data['ID'] ?>">
+                    <ul style="text-align: left; margin: 0 auto 0 auto; max-width: 90%;" class="actions displayBtnProfil">
+
+                        <li style="float: left;">
+                            <input <?php echo ($disable2) ?> id="btnValider" name="btnValider" style="background: #FF8C00; margin-bottom:100px;color:aliceblue; font-size:medium;" type="submit" value="Envoyer" class="special">
+                            <label for="btnValider" class="labelProfil" style="margin-left: 1em;"></label>
+                        </li>
+                        <?php if ($_SESSION['droit'] == 1) { ?>
+                            <li style="float:right;"><a href="liste.php?event=<?php echo $_GET['event']; ?>" class="button special">Retour</a></li>
+                        <?php } ?>
+                        <?php if (($_GET['idColaborateur'] != "") && ($_SESSION['droit'] == 0)) { ?>
+                            <li style="float:right;"><a href="societe.php" class="button special">Retour</a></li>
+                        <?php } ?>
+                    </ul>
                 </div>
 
-        </div>
-
-        <br>
-
-        <div class="12u$">
-            <input type="hidden" name="form" value="profile">
-            <input type="hidden" name="id_societe" value="<?= $societe_infos['ID'] ?>">
-            <input type="hidden" name="id" value="<?= $data['ID'] ?>">
-            <ul style="text-align: left; margin: 0 auto 0 auto; max-width: 90%;" class="actions displayBtnProfil">
-                <li>
-                    <input <?php echo ($disable) ?> id="btnSauvegarder" name="btnSauvegarder" style="background: linear-gradient(to right, #E9D9CE, #E9D9CE);" type="submit" value="Sauvegarder*" class="special">
-                    <label for="btnSauvegarder" class="labelProfil" style="margin-left: 1em;">* Sauvegarde provisoire</label>
-                </li>
-
-                <li style="float: right;">
-                    <input <?php echo ($disable2) ?> id="btnValider" name="btnValider" style="background: linear-gradient(to right, #FFD400, #FFD400);" type="submit" value="Valider*" class="special">
-                    <label for="btnValider" class="labelProfil" style="margin-left: 1em;">* Validation définitive</label>
-                </li>
-                <?php if ($_SESSION['droit'] == 1) { ?>
-                    <li style="float:right;"><a href="liste.php?event=<?php echo $_GET['event']; ?>" class="button special">Retour</a></li>
-                <?php } ?>
-                <?php if (($_GET['idColaborateur'] != "") && ($_SESSION['droit'] == 0)) { ?>
-                    <li style="float:right;"><a href="societe.php" class="button special">Retour</a></li>
-                <?php } ?>
-            </ul>
-        </div>
-
-        </form>
+            </form>
         </div>
     </section>
 
@@ -843,140 +672,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     </script>
 
-    <script>
-        function readURL(input) {
-
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function(e) {
-                    $('#blah').attr('src', e.target.result);
-                }
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-        $(".pdfNotValid").css("display", "none");
-        $(".pdfValid").css("display", "none");
-        $(".sortpicture").css("display", "none");
-        $(".uploadTrombi").css("display", "none");
-        $(".sortpictureAcc").css("display", "none");
-        $(".uploadTrombiAcc").css("display", "none");
-        let uploadFieldIdentite = document.getElementById("sortpicture");
-        uploadFieldIdentite.onchange = function() {
-            if (this.files[0].size > (1048576 * 8)) {
-                alert("Attention, votre fichier dépasse la taille autorisée !");
-                this.value = "";
-                $('#blah').attr('src', '<?php if ($myurlok != "") {
-                                            echo $myurlok . "?" . time();
-                                        } ?>');
-            } else {
-                readURL(this);
-            };
-        };
-
-        let uploadFieldTrombi = document.getElementById("uploadTrombi");
-        uploadFieldTrombi.onchange = function() {
-
-            if (this.files[0].size > (1048576 * 8)) {
-                alert("Attention, votre fichier dépasse la taille autorisée !");
-                this.value = "";
-                $('#blah').attr('src', '<?php if ($myurlok != "") {
-                                            echo $myurlok . "?" . time();
-                                        } ?>');
-            } else {
-                readURL(this);
-            };
-        };
-
-        let uploadFieldIdentiteAcc = document.getElementById("sortpictureAcc");
-        uploadFieldIdentiteAcc.onchange = function() {
-
-            if (this.files[0].size > (1048576 * 8)) {
-                alert("Attention, votre fichier dépasse la taille autorisée !");
-                this.value = "";
-                $('#blah').attr('src', '<?php if ($myurlok != "") {
-                                            echo $myurlok . "?" . time();
-                                        } ?>');
-            } else {
-                readURL(this);
-            };
-        };
-
-        let uploadFieldTrombiAcc = document.getElementById("uploadTrombiAcc");
-        uploadFieldTrombiAcc.onchange = function() {
-
-            if (this.files[0].size > (1048576 * 8)) {
-                alert("Attention, votre fichier dépasse la taille autorisée !");
-                this.value = "";
-                $('#blah').attr('src', '<?php if ($myurlok != "") {
-                                            echo $myurlok . "?" . time();
-                                        } ?>');
-            } else {
-                readURL(this);
-            };
-        };
-
-        uploadFieldIdentite.onchange = function(e) {
-            const [sortpicture] = e.target.files;
-
-            const {
-                name: fileName,
-                size
-            } = sortpicture;
-
-            const fileSize = (size / 1000).toFixed(2);
-
-            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
-            document.querySelector('.file-name-identite').textContent = fileNameAndSize;
-            $(".file-name-identite").css("margin", "0");
-        }
-
-        uploadFieldTrombi.onchange = function(e) {
-            const [uploadTrombi] = e.target.files;
-
-            const {
-                name: fileName,
-                size
-            } = uploadTrombi;
-
-            const fileSize = (size / 1000).toFixed(2);
-
-            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
-            document.querySelector('.file-name-trombi').textContent = fileNameAndSize;
-            $(".file-name-trombi").css("margin", "0");
-        }
-
-        uploadFieldIdentiteAcc.onchange = function(e) {
-            const [sortpictureAcc] = e.target.files;
-
-            const {
-                name: fileName,
-                size
-            } = sortpictureAcc;
-
-            const fileSize = (size / 1000).toFixed(2);
-
-            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
-            document.querySelector('.file-name-identite-acc').textContent = fileNameAndSize;
-            $(".file-name-identite-acc").css("margin", "0");
-        }
-
-        uploadFieldTrombiAcc.onchange = function(e) {
-            const [uploadTrombiAcc] = e.target.files;
-
-            const {
-                name: fileName,
-                size
-            } = uploadTrombiAcc;
-
-            const fileSize = (size / 1000).toFixed(2);
-
-            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
-            document.querySelector('.file-name-trombi-acc').textContent = fileNameAndSize;
-            $(".file-name-trombi-acc").css("margin", "0");
-        }
-    </script>
+ 
 
     <script type="text/javascript">
         $(document).ready(function() {

@@ -1,0 +1,57 @@
+
+  body {
+	  margin: 0;
+	  font-family: Arial;
+  }
+  
+  .header {
+	  text-align: center;
+	  padding: 32px;
+  }
+  .container-galerie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-galerie h1{
+    text-align: center;
+    font-weight: 500;
+    color: grey;
+    font-size: 25px;
+  }
+
+  
+.gallery1 {
+  display: flex;
+	flex-wrap: wrap;
+  }
+
+/* Create four equal columns that sits next to each other */
+.gallery-item1 {
+	  max-width: 25%;
+	  padding: 0 10px;
+    padding-top: 50px;
+  }
+  
+  .gallery-item1 img {
+	  width: 200px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+	.gallery-item1 {
+	  max-width: 50%;
+    justify-content: center;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+	.gallery-item1 {
+	  max-width: 100%;
+    justify-content: center;
+	}
+  }

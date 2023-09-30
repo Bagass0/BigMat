@@ -43,7 +43,7 @@ $contents .= '</div></div></td></tr></tbody></table></td></tr></tbody></table></
 $mail = new PHPMailer;
 $mail->isSMTP();
 
-$from = 'courtage@voyages-abeille-assurances.fr'; // remplacer par l'email emetteur de votre domaine
+$from = 'hugobarep@gmail.com'; // remplacer par l'email emetteur de votre domaine
 $to = $email;// remplacer par l'email de la personne qui recoit
 $to_name = '';// Le nom de la personne si vous le souhaitez
 
