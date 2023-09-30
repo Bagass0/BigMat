@@ -11,11 +11,11 @@ class Database{
 	public static function getMysqli(){
 		$env = 'dev';
 
-		$db_dev = array("host" => "localhost", "port" => "3306", "dbname" => "AbeilleAssurances", "login" => "root", "password" => "root");
+		$db_dev = array("host" => "localhost", "port" => "3306", "dbname" => "BigMat", "login" => "root", "password" => "root");
 
-		$db_preprod = array("host" => "51.75.128.122", "port" => "3306", "dbname" => "AbeilleAssurances", "login" => "AbeilleAssurances", "password" => "Rg15Rt6_lrh4Er");
+		$db_preprod = array("host" => "51.75.128.122", "port" => "3306", "dbname" => "BigMat", "login" => "AbeilleAssurances", "password" => "Rg15Rt6_lrh4Er");
 
-		$db_prod = array("host" => "51.75.128.122", "port" => "3306", "dbname" => "AbeilleAssurances", "login" => "AbeilleAssurances", "password" => "Rg15Rt6_lrh4Er");
+		$db_prod = array("host" => "51.75.128.122", "port" => "3306", "dbname" => "BigMat", "login" => "AbeilleAssurances", "password" => "Rg15Rt6_lrh4Er");
 
 		switch($env){
 			case 'dev':
